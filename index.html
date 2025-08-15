@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mochila Virtual</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <button id="theme-toggle" aria-label="Alternar temas">🎨 Temas</button>
+    <div id="theme-options" class="hidden" role="menu" aria-label="Opções de Tema">
+      <button data-theme="light">Claro</button>
+      <button data-theme="dark">Escuro</button>
+      <button data-theme="galaxy">Galaxy</button>
+      <button data-theme="cyber">Cyber</button>
+      <button data-theme="custom">Custom</button>
+    </div>
+  </header>
+
+  <nav aria-label="Matérias">
+    <ul class="subjects-list">
+      <li><button data-subject="subj1">AMC</button></li>
+      <li><button data-subject="subj2">NR</button></li>
+      <li><button data-subject="subj3">LOG PR</button></li>
+      <li><button data-subject="subj4">POO JAVA</button></li>
+      <li><button data-subject="subj5">PROG WEB</button></li>
+      <li><button data-subject="subj6">HTML E CSS</button></li>
+      <li><button data-subject="subj7">GT</button></li>
+      <li><button data-subject="subj8">SO</button></li>
+    </ul>
+  </nav>
+
+  <!-- Container de botões de conteúdo -->
+  <aside id="content-options" class="content-options hidden" aria-label="Conteúdos da Matéria">
+    <!-- Será preenchido via JS -->
+  </aside>
+
+  <!-- Modal de conteúdo completo -->
+  <div id="content-frame" class="content-frame hidden" role="dialog" aria-modal="true">
+    <div class="frame-inner">
+      <button id="close-frame" class="close-btn" aria-label="Fechar">×</button>
+      <div id="frame-content"></div>
+    </div>
+  </div>
+
+  <!-- Templates de conteúdo (invisíveis) -->
+  <div id="templates" class="hidden">
+    <div id="tpl-subj1-1">
+      <h2>Aula 1 - AMC – Guia de aprendizagem dos alunos</h2>
+      <p>Foi feito o planejamento dos conteúdos do bimestre.</p>
+    </div>
+     <div id="tpl-subj1-2">
+      <h2>Aula 2 – AMC - Compra de PC</h2>
+      <p><h1>Como Escolher um PC Custo-Benefício</h1><h2>1. Defina o objetivo principal do PC</h2><table><tr><th>Uso principal</th><th>Requisitos</th></tr><tr><td>Estudos, navegação e tarefas leves</td><td>Processador básico (Intel i3/Ryzen 3), 8 GB de RAM, SSD</td></tr><tr><td>Jogos medianos / edição leve</td><td>Processador intermediário (i5/Ryzen 5), 16 GB RAM, GPU dedicada</td></tr><tr><td>Jogos pesados / edição profissional</td><td>Processador potente (i7/Ryzen 7+), 16-32 GB RAM, GPU potente</td></tr><tr><td>Programação / multitarefa</td><td>Priorize RAM (16 GB+) e SSD</td></tr></table><h2>2. Priorize os componentes certos</h2><strong>CPU (Processador):</strong> Prefira Intel i3/i5 ou Ryzen 3/5. Evite Celeron e Pentium.<br><strong>RAM:</strong> Mínimo 8 GB, ideal 16 GB para jogos/edição.<br><strong>Armazenamento:</strong> Use SSD (mínimo 240 GB). Pode combinar com HD.<br><strong>Placa de vídeo:</strong> Para jogos/edição, considere GTX 1650, RTX 3050 ou RX 6600.<h2>3. Estabeleça um orçamento</h2><ul><li><strong>Até R$ 2.000:</strong> PC usado ou recondicionado, 8 GB RAM + SSD.</li><li><strong>R$ 2.500 a R$ 3.500:</strong> Ryzen 5 ou i5, 16 GB RAM, ótimo para uso geral.</li><li><strong>R$ 4.000 a R$ 5.000+:</strong> PCs com GPU dedicada boa, ideal para jogos e edição.</li></ul><h2>4. Montar ou comprar pronto?</h2><ul><li><strong>Montar:</strong> Mais barato e peças melhores.</li><li><strong>Comprar pronto:</strong> Mais prático, mas verifique a qualidade das peças.</li></ul><h2>5. Avalie marcas e garantia</h2><ul><li>Verifique se as peças têm garantia individual (em PCs montados).</li><li>Pesquise a reputação da loja.</li><li>Dell, Lenovo e Acer têm bom suporte. PCs montados podem ser mais potentes pelo mesmo preço.</li></ul></p>
+    </div>
+    <div id="tpl-subj1-3">
+      <h2>Aula 3 – AMC - Analise de configuração de celular</h2>
+      <p><h2>Recomendações de Configurações por Uso</h2><ul><li><strong>Estudo e tarefas básicas:</strong> 4 GB de RAM, processador quad-core (ex: MediaTek Helio G80), 64 GB de armazenamento e bateria ≥ 4 000 mAh.</li><li><strong>Jogos leves e multitarefa moderada:</strong> 8 GB de RAM, processador octa-core de média performance (ex: Snapdragon 695), 128 GB de armazenamento e bateria ≥ 4 500 mAh.</li><li><strong>Jogos pesados e edição de fotos/vídeos:</strong> 12 GB de RAM, processador top-de-linha (ex: Snapdragon 8 Gen 1), 128–256 GB de armazenamento UFS 3.1 e bateria ≥ 5 000 mAh.</li><li><strong>Uso profissional e produtividade intensa:</strong> 16 GB de RAM, processador flagship recente, ≥ 256 GB de armazenamento NVMe, bateria ≥ 5 000 mAh com carregamento rápido ≥ 65 W.</li></ul><h2>Atividade prática</h2><h4>Comparamos 4 celulares dos alunos da sala, concluímos que:<p>Tela: 1° Iphone 14 / 2° Pocox6 Pro / 3° Note 12S / 4° Redmi note 14</p><p>Batéria: 1° Redmi note 14 / 2° Redmi note 12S / 3° Pocox6 Pro / 4° Iphone 14</p><p>Desempenho: 1° Iphone 14 / 2° Pocox6 Pro / 3° Redmi note 14 / 4° Redmi Note 12S</p><p>Camera: 1° Iphone 14 / 2° Redmi 14 / 3° Pocox6 Pro / 4° Note 12S</p></p>
+    </div>
+    <div id="tpl-subj1-4">
+      <h2>Aula 4 – AMC - Performance de celular</h2>
+      <p>Vimos sobre performance de celulares e descobrimos um site que nos da informações detalhadas sobre celulares custo-beneficio.</p><p>Com este link, você pode verificar tudo que quer saber antes de comprar um novo celular.<a href="https://www.techtudo.com.br/listas/2024/07/celular-tudo-o-que-voce-precisa-saber-antes-de-comprar-um-edmobile.ghtml">Aproveite!</a>
+    </div>
+    <div id="tpl-subj1-5">
+      <h2>Aula 5 – AMC - Performance de PC</h2>
+      <p>Vimos sobre performance de PCs e descobrimos um site que nos da informações detalhadas sobre PCs custo-beneficio.<p>Com este link, você pode verificar tudo que quer saber antes de comprar um novo PC de custo beneficio.<a href="https://www.techtudo.com.br/listas/2024/07/celular-tudo-o-que-voce-precisa-saber-antes-de-comprar-um-edmobile.ghtml">Aproveite!</p>
+    </div>
+    <div id="tpl-subj1-6">
+      <h2>Aula 6 – Como montar um servidor</h2>
+      <p><p>De acordo com pesquisas, podemos chegar a conclusão de que <ul><li>NÃO é recomendado usar PCs antigos e/ou usados.</li><li>Uma boa possíbilidade alugar um servidor nuvem, pois é consideravelmente seguro e prático, porém também não é perfeito, por possuir um custo considerável.</li><li>Outra possibilidade é comprar um servidor físico como o NAS, mas ele também pode ter um valor elevado.</li></ul>O mais interessante provavelmente vai ser a nuvem por ser mais eficaz por um preço menor</p></p>
+    </div>
+    <div id="tpl-subj1-7">
+      <h2>Aula 2 – Maneiro</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj1-8">
+      <h2>Aula 2 – Maneiro</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-1">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-2">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-3">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-4">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj2-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-1">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-2">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-3">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-4">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj3-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj4-1">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-2">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-3">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-4">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj4-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-1">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-2">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-3">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-4">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj5-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj6-1">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-2">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-3">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-4">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj6-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj7-1">
+      <h2>Aula 1 – GT - Guia de aprendizagem.</h2>
+      <p>Foi feito o planejamento dos conteúdos do bimestre.</p>
+    </div>
+     <div id="tpl-subj7-2">
+      <h2>Aula 2 – GT - Guia de aprendizagem.</h2>
+      <p>Foi feito o planejamento dos conteúdos do bimestre.</p>
+    </div>
+     <div id="tpl-subj7-3">
+      <h2>Aula 3 – GT - Introdução ao google agenda</h2>
+      <h3>Introdução ao google agenda</h3><p>Foi feita a introdução ao <a href="https://calendar.google.com/calendar/u/0/r/week/2027/1/31">google agenda</a>, onde aprendemos sobre criar os eventos e diversas formas de como organiza-los.</p>
+    </div>
+     <div id="tpl-subj7-4">
+      <h2>Aula 4 – GT - Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj7-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj7-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj7-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj7-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+     <div id="tpl-subj8-1">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-2">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-3">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-4">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-5">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-6">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-7">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+    <div id="tpl-subj8-8">
+      <h2>Aula 1 – Conceitos Iniciais</h2>
+      <p>Texto e exemplos da aula 1...</p>
+    </div>
+  </div>
+
+  <aside id="custom-theme-settings" class="hidden" aria-label="Tema Custom">
+    <h3>Customizar Tema</h3>
+    <label>Fundo: <input type="color" id="custom-bg" value="#ffffff"/></label>
+    <label>Texto: <input type="color" id="custom-text" value="#000000"/></label>
+    <label>Destaque: <input type="color" id="custom-accent" value="#007bff"/></label>
+    <button id="save-custom">Salvar</button>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
