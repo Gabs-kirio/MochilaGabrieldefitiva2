@@ -1,0 +1,174 @@
+// Temas
+const themeToggle  = document.getElementById('theme-toggle');
+const themeOpts    = document.getElementById('theme-options');
+const customPane   = document.getElementById('custom-theme-settings');
+const saveCustom   = document.getElementById('save-custom');
+const customBg     = document.getElementById('custom-bg');
+const customText   = document.getElementById('custom-text');
+const customAccent = document.getElementById('custom-accent');
+
+function applyTheme(name, vars = {}) {
+  document.body.className = name==='light'?'':`theme-${name}`;
+  if (name==='custom') {
+    Object.entries(vars).forEach(([k,v])=>
+      document.documentElement.style.setProperty(`--${k}`, v)
+    );
+    localStorage.setItem('customVars', JSON.stringify(vars));
+  }
+  localStorage.setItem('theme', name);
+}
+
+(function loadTheme(){
+  const name = localStorage.getItem('theme')||'light';
+  if (name==='custom') {
+    const vars = JSON.parse(localStorage.getItem('customVars')||'{}');
+    applyTheme('custom', vars);
+  } else applyTheme(name);
+})();
+
+themeToggle.addEventListener('click', ()=>{
+  themeOpts.classList.toggle('hidden');
+  customPane.classList.add('hidden');
+});
+
+themeOpts.addEventListener('click', e=>{
+  const t = e.target.dataset.theme;
+  if (!t) return;
+  themeOpts.classList.add('hidden');
+  if (t==='custom') customPane.classList.toggle('hidden');
+  else applyTheme(t);
+});
+
+saveCustom.addEventListener('click', ()=>{
+  const vars = {
+    'bg-color': customBg.value,
+    'text-color': customText.value,
+    'accent-color': customAccent.value
+  };
+  applyTheme('custom', vars);
+  customPane.classList.add('hidden');
+});
+
+// Fluxo de Matérias → Conteúdos
+const subjects    = document.querySelectorAll('[data-subject]');
+const optionsPane = document.getElementById('content-options');
+const modal       = document.getElementById('content-frame');
+const closeBtn    = document.getElementById('close-frame');
+const frameInner  = document.getElementById('frame-content');
+const templates   = document.getElementById('templates');
+
+// Definição de conteúdos por matéria
+const catalog = {
+  subj1: [
+    { id: 'subj1-1', label: 'Guia de aprendizagem dos alunos - 10/07' },
+    { id: 'subj1-2', label: 'Comprar PC - 15/07' },
+    { id: 'subj1-3', label: 'Analise de configuração de celular - 17/07' },
+    { id: 'subj1-4', label: 'Performance de celular - 05/08' },
+    { id: 'subj1-5', label: 'Performance de PC - 08/08' },
+    { id: 'subj1-6', label: 'Como montar um servidor - 11/08' },
+    { id: 'subj1-7', label: 'Aula 7' },
+    { id: 'subj1-8', label: 'Aula 8' },
+  ],
+  subj2: [
+    { id: 'subj2-1', label: 'Aula 1' },
+    { id: 'subj2-2', label: 'Aula 2' },
+    { id: 'subj2-3', label: 'Aula 3' },
+    { id: 'subj2-4', label: 'Aula 4' },
+    { id: 'subj2-5', label: 'Aula 5' },
+    { id: 'subj2-6', label: 'Aula 6' },
+    { id: 'subj2-7', label: 'Aula 7' },
+    { id: 'subj2-8', label: 'Aula 8' },
+  ],
+   subj3: [
+    { id: 'subj3-1', label: 'Aula 1' },
+    { id: 'subj3-2', label: 'Aula 2' },
+    { id: 'subj3-3', label: 'Aula 3' },
+    { id: 'subj3-4', label: 'Aula 4' },
+    { id: 'subj3-5', label: 'Aula 5' },
+    { id: 'subj3-6', label: 'Aula 6' },
+    { id: 'subj3-7', label: 'Aula 7' },
+    { id: 'subj3-8', label: 'Aula 8' },
+  ],
+   subj4: [
+    { id: 'subj4-1', label: 'Aula 1' },
+    { id: 'subj4-2', label: 'Aula 2' },
+    { id: 'subj4-3', label: 'Aula 3' },
+    { id: 'subj4-4', label: 'Aula 4' },
+    { id: 'subj4-5', label: 'Aula 5' },
+    { id: 'subj4-6', label: 'Aula 6' },
+    { id: 'subj4-7', label: 'Aula 7' },
+    { id: 'subj4-8', label: 'Aula 8' },
+  ],
+   subj5: [
+    { id: 'subj5-1', label: 'Aula 1' },
+    { id: 'subj5-2', label: 'Aula 2' },
+    { id: 'subj5-3', label: 'Aula 3' },
+    { id: 'subj5-4', label: 'Aula 4' },
+    { id: 'subj5-5', label: 'Aula 5' },
+    { id: 'subj5-6', label: 'Aula 6' },
+    { id: 'subj5-7', label: 'Aula 7' },
+    { id: 'subj5-8', label: 'Aula 8' },
+  ],
+   subj6: [
+    { id: 'subj6-1', label: 'Aula 1' },
+    { id: 'subj6-2', label: 'Aula 2' },
+    { id: 'subj6-3', label: 'Aula 3' },
+    { id: 'subj6-4', label: 'Aula 4' },
+    { id: 'subj6-5', label: 'Aula 5' },
+    { id: 'subj6-6', label: 'Aula 6' },
+    { id: 'subj6-7', label: 'Aula 7' },
+    { id: 'subj6-8', label: 'Aula 8' },
+  ],
+   subj7: [
+    { id: 'subj7-1', label: 'Guia de aprendizagem - 10/07' },
+    { id: 'subj7-2', label: 'Guia de aprendizagem - 17/07' },
+    { id: 'subj7-3', label: 'Introdução ao google agenda - 07/08' },
+    { id: 'subj7-4', label: 'Aula 4' },
+    { id: 'subj7-5', label: 'Aula 5' },
+    { id: 'subj7-6', label: 'Aula 6' },
+    { id: 'subj7-7', label: 'Aula 7' },
+    { id: 'subj7-8', label: 'Aula 8' },
+  ],
+   subj8: [
+    { id: 'subj8-1', label: 'Aula 1' },
+    { id: 'subj8-2', label: 'Aula 2' },
+    { id: 'subj8-3', label: 'Aula 3' },
+    { id: 'subj8-4', label: 'Aula 4' },
+    { id: 'subj8-5', label: 'Aula 5' },
+    { id: 'subj8-6', label: 'Aula 6' },
+    { id: 'subj8-7', label: 'Aula 7' },
+    { id: 'subj8-8', label: 'Aula 8' },
+  ],
+
+};
+
+// Ao clicar numa matéria, gera botões de conteúdo
+subjects.forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    const key = btn.dataset.subject;
+    optionsPane.innerHTML = '';    
+    if (!catalog[key]) return;
+    catalog[key].forEach(item=>{
+      const b = document.createElement('button');
+      b.textContent = item.label;
+      b.dataset.contentId = item.id;
+      optionsPane.appendChild(b);
+    });
+    optionsPane.classList.remove('hidden');
+  });
+});
+
+// Ao clicar num conteúdo, abre modal com o template
+optionsPane.addEventListener('click', e=>{
+  const id = e.target.dataset.contentId;
+  if (!id) return;
+  const tpl = document.getElementById(`tpl-${id}`);
+  if (!tpl) return;
+  frameInner.innerHTML = tpl.innerHTML;
+  modal.classList.remove('hidden');
+});
+
+// Fechar modal
+closeBtn.addEventListener('click', ()=>{
+  modal.classList.add('hidden');
+});
