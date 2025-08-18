@@ -7,39 +7,82 @@ const customBg     = document.getElementById('custom-bg');
 const customText   = document.getElementById('custom-text');
 const customAccent = document.getElementById('custom-accent');
 
+// URL do GIF Galaxy
+const galaxyGifUrl = "galaxy.gif";
+const cyberGifUrl  = "Cyber.gif";
+const estudanteGifUrl  = "Estudante.gif";
+
 function applyTheme(name, vars = {}) {
-  document.body.className = name==='light'?'':`theme-${name}`;
-  if (name==='custom') {
-    Object.entries(vars).forEach(([k,v])=>
+  // Define a classe base do tema
+  document.body.className = name === 'light' ? '' : `theme-${name}`;
+
+  // Remove imagem de fundo ao sair do Galaxy
+  if (name !== 'galaxy') {
+    document.body.style.backgroundImage = '';
+    document.body.style.backgroundSize = '';
+    document.body.style.backgroundPosition = '';
+    document.body.style.backgroundAttachment = '';
+  }
+
+  // Aplica o GIF no Galaxy
+  if (name === 'galaxy') {
+    document.body.style.backgroundImage = `url('${galaxyGifUrl}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundAttachment = "fixed";
+  }
+ if (name === 'cyber') {
+    document.body.style.backgroundImage = `url('${cyberGifUrl}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundAttachment = "fixed";
+  }
+   if (name === 'estudante') {
+    document.body.style.backgroundImage = `url('${estudanteGifUrl}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundAttachment = "fixed";
+  // Aplica variáveis no tema custom
+  if (name === 'custom') {
+    Object.entries(vars).forEach(([k, v]) =>
       document.documentElement.style.setProperty(`--${k}`, v)
     );
     localStorage.setItem('customVars', JSON.stringify(vars));
   }
+
+  // Salva o nome do tema atual
   localStorage.setItem('theme', name);
 }
-
-(function loadTheme(){
-  const name = localStorage.getItem('theme')||'light';
-  if (name==='custom') {
-    const vars = JSON.parse(localStorage.getItem('customVars')||'{}');
+}
+// Carrega tema salvo
+(function loadTheme() {
+  const name = localStorage.getItem('theme') || 'light';
+  if (name === 'custom') {
+    const vars = JSON.parse(localStorage.getItem('customVars') || '{}');
     applyTheme('custom', vars);
-  } else applyTheme(name);
+  } else {
+    applyTheme(name);
+  }
 })();
 
-themeToggle.addEventListener('click', ()=>{
+// Eventos de UI
+themeToggle.addEventListener('click', () => {
   themeOpts.classList.toggle('hidden');
   customPane.classList.add('hidden');
 });
 
-themeOpts.addEventListener('click', e=>{
+themeOpts.addEventListener('click', e => {
   const t = e.target.dataset.theme;
   if (!t) return;
   themeOpts.classList.add('hidden');
-  if (t==='custom') customPane.classList.toggle('hidden');
-  else applyTheme(t);
+  if (t === 'custom') {
+    customPane.classList.toggle('hidden');
+  } else {
+    applyTheme(t);
+  }
 });
 
-saveCustom.addEventListener('click', ()=>{
+saveCustom.addEventListener('click', () => {
   const vars = {
     'bg-color': customBg.value,
     'text-color': customText.value,
@@ -48,6 +91,7 @@ saveCustom.addEventListener('click', ()=>{
   applyTheme('custom', vars);
   customPane.classList.add('hidden');
 });
+
 
 // Fluxo de Matérias → Conteúdos
 const subjects    = document.querySelectorAll('[data-subject]');
@@ -175,3 +219,4 @@ optionsPane.addEventListener('click', e=>{
 closeBtn.addEventListener('click', ()=>{
   modal.classList.add('hidden');
 });
+
