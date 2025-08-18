@@ -25,7 +25,7 @@
 
 /* modo galaxy: botão azul escuro */
 :root[data-theme="galaxy"] .theme-toggle-btn {
-  background: #001f3f;
+  background: #ffee02;
   color: #ffffff;
 }
 
@@ -33,6 +33,18 @@
 :root[data-theme="cyber"] .theme-toggle-btn {
   background: #00ff00;
   color: #000000;
+}
+body.theme-galaxy {
+  --bg-color: #ffd900;
+  --text-color: #e0e0ff;
+  --accent-color: #ebfc00;
+  
+  /* Imagem de fundo Galaxy */
+  background-image: url(galaxy.gif);
+  background-size: cover;        /* cobre a tela */
+  background-position: center;   /* centraliza */
+  background-repeat: no-repeat;  /* evita repetição */
+  background-attachment: fixed;  /* efeito fixo ao rolar */
 }
 
   body {
@@ -256,19 +268,22 @@ nav {
   }
   
   body.theme-galaxy {
-    --bg-color: #0a0a2a;
-    --text-color: #e0e0ff;
-    --accent-color: #4444ff;
-    background-image: url('https://i.imgur.com/3vQTq0d.jpg');
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #fffc44;
     background-size: cover;
   }
   
   body.theme-cyber {
     --bg-color: #000;
-    --text-color: #00ffdd;
-    --accent-color: #ff00aa;
+    --text-color: #ffffff;
+    --accent-color: #00ffb3;
   }
-  
+   body.theme-estudante {
+    --bg-color: #000;
+    --text-color: #ffffff;
+    --accent-color: #ffffff41;
+  }
   *, *::before, *::after {
     transition: background-color .3s, color .3s;
   }
