@@ -111,7 +111,7 @@ const catalog = {
     { id: 'subj1-5', label: 'Performance de PC - 08/08' },
     { id: 'subj1-6', label: 'Como montar um servidor - 11/08' },
     { id: 'subj1-7', label: 'Ergonomia da computação para pessoas com deficiência - 18/08' },
-    { id: 'subj1-8', label: 'Aula 8' },
+    { id: 'subj1-8', label: 'TIC (Tecnologia da informação e comunicação) - 19/08' },
   ],
   subj2: [
     { id: 'subj2-1', label: 'Guia de aprendizagem dos alunos - 16/07' },
@@ -144,7 +144,7 @@ const catalog = {
     { id: 'subj4-8', label: 'Preparação pro projeto de juventude - 12/08' },
     { id: 'subj4-9', label: 'Atualização de software - 13/08' },
     { id: 'subj4-10', label: 'Atualização de software - 15/08' },
-    { id: 'subj4-11', label: 'Preparação pro projeto de juventude - 16/08' },
+    { id: 'subj4-11', label: 'Projeto robotica - 19/08' },
   ],
    subj5: [
     { id: 'subj5-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
@@ -184,7 +184,7 @@ const catalog = {
     { id: 'subj8-5', label: 'Otimização de PC a partir de confifurações de SO - 08/08' },
     { id: 'subj8-6', label: 'Montagem de servidor (teoria) - 13/08' },
     { id: 'subj8-7', label: 'Montagem de servidor (Pratica) - 15/08' },
-    { id: 'subj8-8', label: 'Aula 8' },
+    { id: 'subj8-8', label: 'Projeto robotica - 19/08' },
   ],
 
 };
