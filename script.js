@@ -7,13 +7,7 @@ const customBg     = document.getElementById('custom-bg');
 const customText   = document.getElementById('custom-text');
 const customAccent = document.getElementById('custom-accent');
  const container = document.querySelector('.container');
- let posY = 0; // posição inicial
 
-    // Captura o evento de rolagem do mouse
-    window.addEventListener('wheel', (event) => {
-      posY += event.deltaY; // adiciona a rolagem à posição Y
-      container.style.top = posY + 'px'; // aplica no container
-    });
 // URL do GIF Galaxy
 const galaxyGifUrl = "galaxy.gif";
 const cyberGifUrl  = "Cyber.gif";
