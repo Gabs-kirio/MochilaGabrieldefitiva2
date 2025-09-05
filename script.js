@@ -6,7 +6,7 @@ const saveCustom   = document.getElementById('save-custom');
 const customBg     = document.getElementById('custom-bg');
 const customText   = document.getElementById('custom-text');
 const customAccent = document.getElementById('custom-accent');
- const container = document.querySelector('.container');
+const container = document.querySelector('.container');
 
 // URL do GIF Galaxy
 const galaxyGifUrl = "galaxy.gif";
@@ -32,17 +32,18 @@ function applyTheme(name, vars = {}) {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundAttachment = "fixed";
   }
- if (name === 'cyber') {
+  if (name === 'cyber') {
     document.body.style.backgroundImage = `url('${cyberGifUrl}')`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundAttachment = "fixed";
   }
-   if (name === 'estudante') {
+  if (name === 'estudante') {
     document.body.style.backgroundImage = `url('${estudanteGifUrl}')`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundAttachment = "fixed";
+  }
   // Aplica variáveis no tema custom
   if (name === 'custom') {
     Object.entries(vars).forEach(([k, v]) =>
@@ -54,7 +55,7 @@ function applyTheme(name, vars = {}) {
   // Salva o nome do tema atual
   localStorage.setItem('theme', name);
 }
-}
+
 // Carrega tema salvo
 (function loadTheme() {
   const name = localStorage.getItem('theme') || 'light';
@@ -93,7 +94,6 @@ saveCustom.addEventListener('click', () => {
   customPane.classList.add('hidden');
 });
 
-
 // Fluxo de Matérias → Conteúdos
 const subjects    = document.querySelectorAll('[data-subject]');
 const optionsPane = document.getElementById('content-options');
@@ -115,6 +115,8 @@ const catalog = {
     { id: 'subj1-8', label: 'TIC (Tecnologia da informação e comunicação) - 19/08' },
     { id: 'subj1-9', label: 'TIC (Tecnologia da informação e comunicação) - 22/08' },
     { id: 'subj1-10', label: 'Acesso de pessoas com deficiência à escola. - 25/08' },
+    { id: 'subj1-11', label: 'Entrevista de TI. - 26/08' },
+    { id: 'subj1-12', label: 'Atualização de matérias pendentes. - 02/09' },
   ],
   subj2: [
     { id: 'subj2-1', label: 'Guia de aprendizagem dos alunos - 16/07' },
@@ -126,7 +128,7 @@ const catalog = {
     { id: 'subj2-7', label: 'Aula 7' },
     { id: 'subj2-8', label: 'Aula 8' },
   ],
-   subj3: [
+  subj3: [
     { id: 'subj3-1', label: 'Guia de aprendizagem dos alunos - 10/07' },
     { id: 'subj3-2', label: 'Introdução á criação de jogos - 17/07' },
     { id: 'subj3-3', label: 'Clube de jogos - 06/08' },
@@ -136,7 +138,7 @@ const catalog = {
     { id: 'subj3-7', label: 'Aula 7' },
     { id: 'subj3-8', label: 'Aula 8' },
   ],
-   subj4: [
+  subj4: [
     { id: 'subj4-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
     { id: 'subj4-2', label: 'Guia de aprendizagem dos alunos - 15/07' },
     { id: 'subj4-3', label: 'Atualização de software - 16/07' },
@@ -150,9 +152,8 @@ const catalog = {
     { id: 'subj4-11', label: 'Projeto robotica - 19/08' },
     { id: 'subj4-12', label: 'Projeto robotica - 20/08' },
     { id: 'subj4-13', label: 'Projeto robotica - 22/08' },
-     
   ],
-   subj5: [
+  subj5: [
     { id: 'subj5-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
     { id: 'subj5-2', label: 'Definição JavaScript, MySQL e PHP - 14/07' },
     { id: 'subj5-3', label: 'Festa junina - 18/07' },
@@ -164,7 +165,7 @@ const catalog = {
     { id: 'subj5-9', label: 'Projeto robôtica - 22/08' },
     { id: 'subj5-10', label: 'Verlibras - 25/08' },
   ],
-   subj6: [
+  subj6: [
     { id: 'subj6-1', label: 'Guia de aprendizagem dos alunos - 14/07' },
     { id: 'subj6-2', label: 'Video HTML e CSS - 04/08' },
     { id: 'subj6-3', label: 'Tema dia do estudante - 11/08' },
@@ -174,7 +175,7 @@ const catalog = {
     { id: 'subj6-7', label: 'Aula 7' },
     { id: 'subj6-8', label: 'Aula 8' },
   ],
-   subj7: [
+  subj7: [
     { id: 'subj7-1', label: 'Guia de aprendizagem - 10/07' },
     { id: 'subj7-2', label: 'Guia de aprendizagem - 17/07' },
     { id: 'subj7-3', label: 'Introdução ao google agenda - 07/08' },
@@ -184,7 +185,7 @@ const catalog = {
     { id: 'subj7-7', label: 'Aula 7' },
     { id: 'subj7-8', label: 'Aula 8' },
   ],
-   subj8: [
+  subj8: [
     { id: 'subj8-1', label: 'Introdução a criação de jogos - Video-Game - 11/07' },
     { id: 'subj8-2', label: 'Otimização de PC a partir de confifurações de SO - 15/07' },
     { id: 'subj8-3', label: 'Festa junina - 18/07' },
@@ -195,27 +196,36 @@ const catalog = {
     { id: 'subj8-8', label: 'Projeto robotica - 19/08' },
     { id: 'subj8-9', label: 'Projeto robotica - 22/08' },
   ],
-
 };
 
-// Ao clicar numa matéria, gera botões de conteúdo
-subjects.forEach(btn=>{
-  btn.addEventListener('click', ()=>{
+// Ao clicar numa matéria, gera botões de conteúdo divididos em duas colunas
+subjects.forEach(btn => {
+  btn.addEventListener('click', () => {
     const key = btn.dataset.subject;
-    optionsPane.innerHTML = '';    
+    // Seleciona as colunas
+    const columnLeft = document.getElementById('column-left');
+    const columnRight = document.getElementById('column-right');
+    // Limpa colunas
+    columnLeft.innerHTML = '';
+    columnRight.innerHTML = '';
+    optionsPane.classList.remove('hidden');
     if (!catalog[key]) return;
-    catalog[key].forEach(item=>{
+    catalog[key].forEach(item => {
       const b = document.createElement('button');
       b.textContent = item.label;
       b.dataset.contentId = item.id;
-      optionsPane.appendChild(b);
+      // Critério de tamanho (ajuste o número conforme preferência)
+      if (item.label.length <= 30) {
+        columnLeft.appendChild(b);
+      } else {
+        columnRight.appendChild(b);
+      }
     });
-    optionsPane.classList.remove('hidden');
   });
 });
 
 // Ao clicar num conteúdo, abre modal com o template
-optionsPane.addEventListener('click', e=>{
+optionsPane.addEventListener('click', e => {
   const id = e.target.dataset.contentId;
   if (!id) return;
   const tpl = document.getElementById(`tpl-${id}`);
@@ -225,7 +235,6 @@ optionsPane.addEventListener('click', e=>{
 });
 
 // Fechar modal
-closeBtn.addEventListener('click', ()=>{
+closeBtn.addEventListener('click', () => {
   modal.classList.add('hidden');
 });
-
