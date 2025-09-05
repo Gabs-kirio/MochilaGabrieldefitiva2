@@ -14,18 +14,13 @@ const cyberGifUrl  = "Cyber.gif";
 const estudanteGifUrl  = "Estudante.gif";
 
 function applyTheme(name, vars = {}) {
-  // Define a classe base do tema
   document.body.className = name === 'light' ? '' : `theme-${name}`;
-
-  // Remove imagem de fundo ao sair do Galaxy
   if (name !== 'galaxy') {
     document.body.style.backgroundImage = '';
     document.body.style.backgroundSize = '';
     document.body.style.backgroundPosition = '';
     document.body.style.backgroundAttachment = '';
   }
-
-  // Aplica o GIF no Galaxy
   if (name === 'galaxy') {
     document.body.style.backgroundImage = `url('${galaxyGifUrl}')`;
     document.body.style.backgroundSize = "cover";
@@ -44,15 +39,12 @@ function applyTheme(name, vars = {}) {
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundAttachment = "fixed";
   }
-  // Aplica variáveis no tema custom
   if (name === 'custom') {
     Object.entries(vars).forEach(([k, v]) =>
       document.documentElement.style.setProperty(`--${k}`, v)
     );
     localStorage.setItem('customVars', JSON.stringify(vars));
   }
-
-  // Salva o nome do tema atual
   localStorage.setItem('theme', name);
 }
 
@@ -118,24 +110,26 @@ const catalog = {
     { id: 'subj1-11', label: 'Entrevista de TI. - 26/08' },
     { id: 'subj1-12', label: 'Atualização de matérias pendentes. - 02/09' },
   ],
+  // ... demais matérias
   subj2: [
     { id: 'subj2-1', label: 'Guia de aprendizagem dos alunos - 16/07' },
     { id: 'subj2-2', label: 'Clube de jogos - 06/08' },
     { id: 'subj2-3', label: 'Clube de jogos - 13/08' },
     { id: 'subj2-4', label: 'Desenvolvimento do projeto de robôtica - 20/08' },
-    { id: 'subj2-5', label: 'Aula 5' },
-    { id: 'subj2-6', label: 'Aula 6' },
+    { id: 'subj2-5', label: 'Exoesqueletos - 27/09' },
+    { id: 'subj2-6', label: 'Organizar armario de robôtica - 03/09' },
     { id: 'subj2-7', label: 'Aula 7' },
     { id: 'subj2-8', label: 'Aula 8' },
   ],
+  // ... demais matérias (subj3, subj4, subj5, subj6, subj7, subj8) igual ao original
   subj3: [
     { id: 'subj3-1', label: 'Guia de aprendizagem dos alunos - 10/07' },
     { id: 'subj3-2', label: 'Introdução á criação de jogos - 17/07' },
     { id: 'subj3-3', label: 'Clube de jogos - 06/08' },
     { id: 'subj3-4', label: 'Clube de jogos - 13/08' },
     { id: 'subj3-5', label: 'Projeto robôtica - 20/08' },
-    { id: 'subj3-6', label: 'Aula 6' },
-    { id: 'subj3-7', label: 'Aula 7' },
+    { id: 'subj3-6', label: 'Projeto robôtica - 27/08' },
+    { id: 'subj3-7', label: 'Projeto robôtica - 03/09' },
     { id: 'subj3-8', label: 'Aula 8' },
   ],
   subj4: [
@@ -152,6 +146,12 @@ const catalog = {
     { id: 'subj4-11', label: 'Projeto robotica - 19/08' },
     { id: 'subj4-12', label: 'Projeto robotica - 20/08' },
     { id: 'subj4-13', label: 'Projeto robotica - 22/08' },
+    { id: 'subj4-14', label: 'Projeto robotica - 26/08' },
+    { id: 'subj4-15', label: 'Projeto robotica - 27/08' },
+    { id: 'subj4-16', label: 'Atualização do software - 29/08' },
+    { id: 'subj4-17', label: 'Atualização do software - 02/09' },
+    { id: 'subj4-18', label: 'Atualização do software - 03/09' },
+    { id: 'subj4-19', label: 'Atualização do software - 05/09' },
   ],
   subj5: [
     { id: 'subj5-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
@@ -164,6 +164,8 @@ const catalog = {
     { id: 'subj5-8', label: 'Ergonomia da computação para pessoas com deficiência - 18/08' },
     { id: 'subj5-9', label: 'Projeto robôtica - 22/08' },
     { id: 'subj5-10', label: 'Verlibras - 25/08' },
+    { id: 'subj5-11', label: 'Atualizar materias no site - 29/08' },
+    { id: 'subj5-12', label: 'Atualizar materias no site - 05/09' },
   ],
   subj6: [
     { id: 'subj6-1', label: 'Guia de aprendizagem dos alunos - 14/07' },
@@ -182,8 +184,8 @@ const catalog = {
     { id: 'subj7-4', label: 'Criação de rotina google agenda - 14/08' },
     { id: 'subj7-5', label: 'Projeto robôtica - 21/08' },
     { id: 'subj7-6', label: 'Competição de pipa - 23/08' },
-    { id: 'subj7-7', label: 'Aula 7' },
-    { id: 'subj7-8', label: 'Aula 8' },
+    { id: 'subj7-7', label: 'Quebra-Cabeça - 28/08' },
+    { id: 'subj7-8', label: 'Quebra-Cabeça - 04/09' },
   ],
   subj8: [
     { id: 'subj8-1', label: 'Introdução a criação de jogos - Video-Game - 11/07' },
@@ -195,27 +197,32 @@ const catalog = {
     { id: 'subj8-7', label: 'Montagem de servidor (Pratica) - 15/08' },
     { id: 'subj8-8', label: 'Projeto robotica - 19/08' },
     { id: 'subj8-9', label: 'Projeto robotica - 22/08' },
+    { id: 'subj8-10', label: 'Preparar entrevista de TI - 26/08' },
+    { id: 'subj8-11', label: 'Organizar a sala - 29/08' },
+    { id: 'subj8-12', label: 'Otimização de PC a partir do SO - 02/09' },
+    { id: 'subj8-13', label: 'Comparar linux e windows - 05/09' },
   ],
 };
 
-// Ao clicar numa matéria, gera botões de conteúdo divididos em duas colunas
+// Ao clicar numa matéria, gera botões de conteúdo divididos em duas colunas de forma equilibrada
 subjects.forEach(btn => {
   btn.addEventListener('click', () => {
     const key = btn.dataset.subject;
-    // Seleciona as colunas
     const columnLeft = document.getElementById('column-left');
     const columnRight = document.getElementById('column-right');
-    // Limpa colunas
     columnLeft.innerHTML = '';
     columnRight.innerHTML = '';
     optionsPane.classList.remove('hidden');
     if (!catalog[key]) return;
-    catalog[key].forEach(item => {
+
+    // Divisão igual entre as colunas
+    const items = catalog[key];
+    const mid = Math.ceil(items.length / 2);
+    items.forEach((item, idx) => {
       const b = document.createElement('button');
       b.textContent = item.label;
       b.dataset.contentId = item.id;
-      // Critério de tamanho (ajuste o número conforme preferência)
-      if (item.label.length <= 30) {
+      if (idx < mid) {
         columnLeft.appendChild(b);
       } else {
         columnRight.appendChild(b);
