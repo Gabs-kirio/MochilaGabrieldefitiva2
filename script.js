@@ -109,6 +109,8 @@ const catalog = {
     { id: 'subj1-10', label: 'Acesso de pessoas com deficiência à escola. - 25/08' },
     { id: 'subj1-11', label: 'Entrevista de TI. - 26/08' },
     { id: 'subj1-12', label: 'Atualização de matérias pendentes. - 02/09' },
+    { id: 'subj1-13', label: 'Diferença entre HD e SSD / HD purple e HD comum. - 08/09' },
+    { id: 'subj1-14', label: 'Diferença entre HD e SSD / HD purple e HD comum. - 09/09' },
   ],
   // ... demais matérias
   subj2: [
@@ -118,7 +120,7 @@ const catalog = {
     { id: 'subj2-4', label: 'Desenvolvimento do projeto de robôtica - 20/08' },
     { id: 'subj2-5', label: 'Exoesqueletos - 27/09' },
     { id: 'subj2-6', label: 'Organizar armario de robôtica - 03/09' },
-    { id: 'subj2-7', label: 'Aula 7' },
+    { id: 'subj2-7', label: 'Revisão prova global - 10/09' },
     { id: 'subj2-8', label: 'Aula 8' },
   ],
   // ... demais matérias (subj3, subj4, subj5, subj6, subj7, subj8) igual ao original
@@ -130,7 +132,7 @@ const catalog = {
     { id: 'subj3-5', label: 'Projeto robôtica - 20/08' },
     { id: 'subj3-6', label: 'Projeto robôtica - 27/08' },
     { id: 'subj3-7', label: 'Projeto robôtica - 03/09' },
-    { id: 'subj3-8', label: 'Aula 8' },
+    { id: 'subj3-8', label: 'Revisão prova global - 10/09' },
   ],
   subj4: [
     { id: 'subj4-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
@@ -152,6 +154,9 @@ const catalog = {
     { id: 'subj4-17', label: 'Atualização do software - 02/09' },
     { id: 'subj4-18', label: 'Atualização do software - 03/09' },
     { id: 'subj4-19', label: 'Atualização do software - 05/09' },
+    { id: 'subj4-20', label: 'Atualização do software - 09/09' },
+    { id: 'subj4-21', label: 'Atualização do software - 10/09' },
+    { id: 'subj4-22', label: 'Atualização do software - 12/09' },
   ],
   subj5: [
     { id: 'subj5-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
@@ -166,14 +171,16 @@ const catalog = {
     { id: 'subj5-10', label: 'Verlibras - 25/08' },
     { id: 'subj5-11', label: 'Atualizar materias no site - 29/08' },
     { id: 'subj5-12', label: 'Atualizar materias no site - 05/09' },
+    { id: 'subj5-13', label: 'Atualizar materias no site - 08/09' },
+    { id: 'subj5-14', label: 'Atualizar materias no site - 12/09' },
   ],
   subj6: [
     { id: 'subj6-1', label: 'Guia de aprendizagem dos alunos - 14/07' },
     { id: 'subj6-2', label: 'Video HTML e CSS - 04/08' },
     { id: 'subj6-3', label: 'Tema dia do estudante - 11/08' },
     { id: 'subj6-4', label: 'Ergonomia da computação para pessoas com deficiência - 18/08' },
-    { id: 'subj6-5', label: 'Recursos assistivos para pessoas deficientes' },
-    { id: 'subj6-6', label: 'Aula 6' },
+    { id: 'subj6-5', label: 'Recursos assistivos para pessoas deficientes - 25/08' },
+    { id: 'subj6-6', label: 'Atualização das matérias - 08/09' },
     { id: 'subj6-7', label: 'Aula 7' },
     { id: 'subj6-8', label: 'Aula 8' },
   ],
@@ -186,6 +193,7 @@ const catalog = {
     { id: 'subj7-6', label: 'Competição de pipa - 23/08' },
     { id: 'subj7-7', label: 'Quebra-Cabeça - 28/08' },
     { id: 'subj7-8', label: 'Quebra-Cabeça - 04/09' },
+    { id: 'subj7-9', label: 'Reset computador - 11/09' },
   ],
   subj8: [
     { id: 'subj8-1', label: 'Introdução a criação de jogos - Video-Game - 11/07' },
@@ -201,6 +209,8 @@ const catalog = {
     { id: 'subj8-11', label: 'Organizar a sala - 29/08' },
     { id: 'subj8-12', label: 'Otimização de PC a partir do SO - 02/09' },
     { id: 'subj8-13', label: 'Comparar linux e windows - 05/09' },
+    { id: 'subj8-14', label: 'Otimização de PC a partir de confifurações de SO - 09/09' },
+    { id: 'subj8-15', label: 'Otimização de PC a partir de confifurações de SO - 12/09' },
   ],
 };
 
