@@ -116,7 +116,8 @@ const catalog = {
      { id: 'subj1-17', label: 'Avaliação global. - 16/09' },
      { id: 'subj1-18', label: 'Desmontar impressora. - 22/09' },
      { id: 'subj1-19', label: 'Desmontar impressora. - 23/09' },
-     { id: 'subj1-20', label: 'Diferença entre HD e SSD / HD purple e HD comum. - 29/09' },
+     { id: 'subj1-20', label: 'Palestra neurociencia. - 29/09' },
+    { id: 'subj1-21', label: 'Palestra neurociência. - 30/09' },
   ],
   // ... demais matérias
   subj2: [
@@ -129,6 +130,7 @@ const catalog = {
     { id: 'subj2-7', label: 'Revisão prova global - 10/09' },
     { id: 'subj2-8', label: 'Avaliação global - 17/09' },
       { id: 'subj2-9', label: 'Projeto robotica - 24/09' },
+     { id: 'subj2-9', label: 'Projeto robotica - 01/10' },
   ],
   // ... demais matérias (subj3, subj4, subj5, subj6, subj7, subj8) igual ao original
   subj3: [
@@ -142,6 +144,7 @@ const catalog = {
     { id: 'subj3-8', label: 'Revisão prova global - 10/09' },
       { id: 'subj3-9', label: 'Avaliação global - 17/09' },
       { id: 'subj3-10', label: 'Projeto robotica - 24/09' },
+     { id: 'subj3-10', label: 'Projeto robotica - 01/10' },
   ],
   subj4: [
     { id: 'subj4-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
@@ -171,9 +174,10 @@ const catalog = {
     { id: 'subj4-25', label: 'Avaliação global - 19/09' },
     { id: 'subj4-26', label: 'Desafio - 23/09' },
     { id: 'subj4-27', label: 'Projeto java - 24/09' },
-    { id: 'subj4-28', label: 'Projeto java - 12/09' },
-    { id: 'subj4-29', label: 'Atualização do software - 26/09' },
-    { id: 'subj4-30', label: 'Atualização do software - 12/09' },
+    { id: 'subj4-28', label: 'Projeto java - 26/09' },
+    { id: 'subj4-29', label: 'Atualização do software - 30/09' },
+    { id: 'subj4-30', label: 'Atualização do software - 01/09' },
+     { id: 'subj4-30', label: 'Atualização do software - 03/09' },
   ],
   subj5: [
     { id: 'subj5-1', label: 'Guia de aprendizagem dos alunos - 11/07' },
@@ -195,7 +199,8 @@ const catalog = {
       { id: 'subj5-17', label: 'Atualizar materias no site - 19/09' },
       { id: 'subj5-18', label: 'Site - 22/09' },
       { id: 'subj5-19', label: 'Atualizar materias pendentes - 26/09' },
-      { id: 'subj5-20', label: 'Atualizar materias no site - 12/09' },
+      { id: 'subj5-20', label: 'Site - 29/09' },
+     { id: 'subj5-19', label: 'Atualizar materias pendentes - 03/10' },
   ],
   subj6: [
     { id: 'subj6-1', label: 'Guia de aprendizagem dos alunos - 14/07' },
@@ -220,6 +225,7 @@ const catalog = {
     { id: 'subj7-9', label: 'Reset computador - 11/09' },
     { id: 'subj7-10', label: 'Tarefas no google agenda - 18/09' },
     { id: 'subj7-11', label: 'Desafio - 25/09' },
+      { id: 'subj7-11', label: 'Desafio - 02/09' },
   ],
   subj8: [
     { id: 'subj8-1', label: 'Introdução a criação de jogos - Video-Game - 11/07' },
@@ -242,6 +248,7 @@ const catalog = {
     { id: 'subj8-18', label: 'Desafio - 23/09' },
     { id: 'subj8-19', label: 'SO de tablet e celulares - 26/09' },
     { id: 'subj8-20', label: 'Otimização de PC a partir de confifurações de SO - 30/09' },
+     { id: 'subj8-20', label: 'Otimização de PC a partir de confifurações de SO - 03/10' },
   ],
 };
 
