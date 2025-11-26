@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Mochila Virtual</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="Styles.css"/>
 </head>
 <body>
   <div id="content-options" class="hidden">
@@ -432,6 +432,394 @@
      <h2>Aula 21 – AMC - Palestra de neurociencia</h2>
       <p>Ocorreu a palestra de neurociência feita pelo aluno Yago Soares</p>
     </div>
+     <div id="tpl-subj1-22">
+      <h2>Aula 22 – AMC - Diferenças entre HD e SSD</h2>
+      <h1>Principais Diferenças entre HD e SSD</h1>
+
+    <h2>Tecnologia de Funcionamento</h2>
+    <ul>
+        <li><strong>HD:</strong> Possui discos mecânicos que giram.</li>
+        <li><strong>SSD:</strong> Usa memória flash, sem partes móveis.</li>
+    </ul>
+
+    <h2>Velocidade</h2>
+    <ul>
+        <li><strong>HD:</strong> 80 a 160 MB/s.</li>
+        <li><strong>SSD:</strong> 400 a 550 MB/s (SATA) ou até 7.000 MB/s (NVMe).</li>
+    </ul>
+
+    <h2>Durabilidade</h2>
+    <ul>
+        <li><strong>HD:</strong> Menos resistente, partes mecânicas.</li>
+        <li><strong>SSD:</strong> Mais resistente e silencioso.</li>
+    </ul>
+
+    <h2>Temperatura e Consumo</h2>
+    <ul>
+        <li><strong>HD:</strong> Maior consumo e mais quente.</li>
+        <li><strong>SSD:</strong> Mais frio e econômico.</li>
+    </ul>
+
+    <h2>Preço e Armazenamento</h2>
+    <ul>
+        <li><strong>HD:</strong> Mais barato e maiores capacidades.</li>
+        <li><strong>SSD:</strong> Mais caro por GB, porém mais rápido.</li>
+    </ul>
+    </div>
+    <div id="tpl-subj1-23">
+     <h2>Aula 23 – AMC - Propriedade de processadores modernos</h2>
+     <h1>Propriedades dos processadores modernos</h1>
+
+
+<h2>1. Pipeline</h2>
+<p>O <strong>pipeline</strong> é como uma linha de montagem: cada instrução passa por etapas separadas — busca, decodificação, execução, acesso à memória e escrita do resultado. Em vez de esperar a instrução terminar todas as etapas antes de iniciar a próxima, o processador sobrepõe essas etapas para aumentar o throughput.</p>
+<pre>
+Ciclo 1: I1 - Fetch
+Ciclo 2: I1 - Decode | I2 - Fetch
+Ciclo 3: I1 - Execute | I2 - Decode | I3 - Fetch
+</pre>
+
+
+<h2>2. Superescalar</h2>
+<p>Arquiteturas superescalares têm múltiplas unidades de execução, permitindo que várias instruções sejam emitidas e executadas no mesmo ciclo (por exemplo, ALUs, FPUs, unidades de load/store).</p>
+
+
+<h2>3. Execução fora de ordem (Out-of-order)</h2>
+<p>O processador reordena dinamicamente instruções para executar aquelas que não dependem de resultados ainda pendentes. Assim evita ociosidade e melhora a utilização das unidades de execução, mantendo o resultado final equivalente à execução ordem original.</p>
+
+
+<h2>4. Previsão de desvios (Branch prediction)</h2>
+<p>Ao se deparar com um desvio condicional, o processador prevê o caminho mais provável e continua a execução. Preditores modernos acertam com frequência acima de 90–95%, reduzindo penalidades no pipeline.</p>
+
+
+<h2>5. Caches (L1, L2, L3)</h2>
+<p>Memória cache aproxima os dados do core. L1 é pequena e muito rápida; L2 é intermediária; L3 geralmente é maior e compartilhada. Mecanismos como prefetch e políticas de coerência mantêm dados onde são mais úteis.</p>
+
+
+<h2>6. Multicore e SMT</h2>
+<p>Em vez de aumentar apenas a frequência, CPUs modernas usam múltiplos núcleos (multicore). SMT (por exemplo, Hyper-Threading) permite que um núcleo execute duas threads simultaneamente, usando unidades ociosas para melhorar throughput.</p>
+
+
+<h2>7. Instruções vetoriais (SIMD)</h2>
+<p>Extensões como SSE, AVX e NEON permitem operar em vários dados ao mesmo tempo (Single Instruction, Multiple Data), acelerando processamento de vetores, imagens, áudio e cargas de trabalho de IA.</p>
+
+
+<h2>8. Microarquitetura e técnicas internas</h2>
+<p>Recursos como renomeação de registradores, reorder buffer, janelas de instrução e unidades especializadas (criptografia, aceleração de IA) tornam a execução mais eficiente e segura.</p>
+
+
+<h2>9. Gerenciamento de energia</h2>
+<p>Controladores ajustam dinamicamente frequência e voltagem, ativam/desativam unidades internas e colocam blocos em estados de baixo consumo para equilibrar desempenho e eficiência energética.</p>
+
+
+<h2>Resumo</h2>
+<ul>
+<li><strong>Pipeline</strong> — aumenta o throughput dividindo etapas.</li>
+<li><strong>Superescalar</strong> — executa múltiplas instruções simultaneamente.</li>
+<li><strong>Out-of-order</strong> — reduz ociosidade reorganizando instruções.</li>
+<li><strong>Branch prediction</strong> — mantém o pipeline cheio ao prever desvios.</li>
+<li><strong>Caches</strong> — diminui latência de acesso a dados.</li>
+<li><strong>Multicore + SMT</strong> — paralelismo em múltiplos níveis.</li>
+<li><strong>SIMD</strong> — acelera operações em vetor.</li>
+<li><strong>Microarquitetura</strong> — técnicas internas que otimizam execução.</li>
+<li><strong>Gerenciamento de energia</strong> — otimiza consumo versus desempenho.</li>
+</ul>
+    </div>
+    <div id="tpl-subj1-24">
+     <h2>Aula 24 – AMC - Praticando para a apresentação do desafio</h2>
+      <p>Praticamos e finalizamos o desafio da semana.</p>
+    </div>
+     <div id="tpl-subj1-25">
+     <h2>Aula 25 – AMC - Desenvolvimento de java</h2>
+      <p>Comecei o projeto para fazer um sistema de login em java.</p>
+    </div>
+     <div id="tpl-subj1-26">
+     <h2>Aula 26 – AMC - Praticando para a apresentação do desafio</h2>
+      <p>Praticamos e finalizamos o desafio da semana.</p>
+    </div>
+     <div id="tpl-subj1-27">
+     <h1>Lentidão ao abrir programas pesados</h1>
+<h2>Causa mais provável</h2>
+<p><strong>Falta de memória RAM suficiente.</strong> Programas pesados (editores de vídeo, jogos, IDEs, etc.) consomem muita RAM. Quando a RAM acaba, o sistema usa memória virtual no disco (HD/SSD), que é muito mais lenta e provoca demora para abrir e quedas de desempenho.</p>
+
+
+<h2>Outras causas possíveis</h2>
+<ul>
+<li>Uso de <strong>HD</strong> em vez de <strong>SSD</strong>, o que deixa o carregamento mais lento.</li>
+<li>Processador fraco ou antigo, incapaz de acompanhar a carga das aplicações.</li>
+<li>Placa de vídeo inexistente ou fraca (quando o programa exige aceleração gráfica).</li>
+<li>Muitos programas rodando em segundo plano consumindo RAM e CPU.</li>
+<li>Arquivos temporários acumulados e, no caso de HD, fragmentação.</li>
+</ul>
+
+
+<h2>Soluções recomendadas</h2>
+<h3>1. Aumentar a memória RAM</h3>
+<p>Verifique quantos GB de RAM o seu computador tem atualmente. Recomendações gerais:
+<ul>
+<li>4 GB — insuficiente hoje em dia;</li>
+<li>8 GB — nível básico;</li>
+<li>16 GB — ideal para programas pesados.</li>
+</ul>
+Se possível, adicione mais memória RAM — o ganho é significativo.</p>
+
+
+<h3>2. Trocar o HD por um SSD</h3>
+<p>Se o computador usa HD, substituir por SSD melhora muito o tempo de inicialização do sistema e de abertura de programas.</p>
+
+
+<h3>3. Fechar programas em segundo plano</h3>
+<p>Feche apps que consomem muita memória, por exemplo: navegadores com muitas abas, Discord, Spotify, Steam, Teams, etc.</p>
+
+
+<h3>4. Desativar programas de inicialização</h3>
+<p>No Windows 10/11, abra o Gerenciador de Tarefas (Ctrl + Shift + Esc) e, na aba <em>Inicializar</em>, desative programas desnecessários.</p>
+
+
+<h3>5. Atualizar drivers e o sistema</h3>
+<p>Mantenha drivers e sistema operacional atualizados — às vezes resolve gargalos e melhora a estabilidade.</p>
+
+
+<h3>6. Ajuste de energia (notebook)</h3>
+<p>Em notebooks, selecione o plano de energia <em>Alto desempenho</em> no Painel de Controle para evitar limitações de CPU.</p>
+
+
+<h2>Deseja que eu te ajude a diagnosticar o seu caso?</h2>
+<p>Se quiser, me informe:</p>
+<ul>
+<li>Quantidade de RAM (por exemplo: 8 GB);</li>
+<li>Se o PC usa SSD ou HD;</li>
+<li>Modelo do processador (se souber).</li>
+</ul>
+
+
+<h2>Comandos úteis</h2>
+<p>Copie e cole no Windows para checar algumas informações:</p>
+<pre><code>msinfo32
+winver
+</code></pre>
+<p>Para ver a quantidade de RAM e se há SSD/HD: Ctrl + Shift + Esc → Desempenho.</p>
+    </div>
+    <div id="tpl-subj1-28">
+     <h2>Aula 28 – AMC - Praticando para a apresentação do desafio</h2>
+      <p>Praticamos e finalizamos o desafio da semana.</p>
+    </div>
+    <div id="tpl-subj1-29">
+     <h2>Aula 29 – AMC - Praticando para a apresentação do desafio</h2>
+     <h1>Diagnóstico: PC liga mas não exibe vídeo</h1>
+
+
+<h2>1. Primeira verificação mais lógica</h2>
+<p>Verifique se o <strong>cabo de vídeo está corretamente conectado</strong> ao computador e ao monitor. Essa é a causa mais comum quando o PC liga, mas não mostra imagem.</p>
+<ul>
+<li>Confirme se o cabo está bem encaixado.</li>
+<li>Veja se o monitor está ligado.</li>
+<li>Confira se o cabo está em boas condições.</li>
+</ul>
+
+
+<h2>2. Passos seguintes</h2>
+<h3>(A) Verificar a saída correta</h3>
+<p>Se o computador tem placa de vídeo dedicada, o cabo deve estar conectado nela, e não na placa-mãe.</p>
+
+
+<h3>(B) Testar outro cabo ou monitor</h3>
+<p>Isso ajuda a identificar se o problema é no cabo ou no próprio monitor.</p>
+
+
+<h3>(C) Verificar sinais de inicialização</h3>
+<p>Observe se há bipes ou LEDs indicando erros na placa-mãe.</p>
+
+
+<h3>(D) Reinstalar a memória RAM</h3>
+<p>Retire os módulos de RAM, limpe-os e coloque novamente. Teste um pente por vez.</p>
+
+
+<h3>(E) Testar a placa de vídeo</h3>
+<p>Retire e coloque novamente a placa de vídeo. Se possível, teste usando o vídeo integrado.</p>
+
+
+<h3>(F) Verificar cabos da fonte</h3>
+<p>Confirme se todos os cabos de energia estão bem conectados (24 pinos, 8 pinos da CPU e cabos da GPU).</p>
+
+
+<h3>(G) Resetar a BIOS</h3>
+<p>Remova a bateria da placa-mãe por alguns minutos ou use o jumper de limpeza de CMOS.</p>
+
+
+<h3>(H) Verificar o processador</h3>
+<p>Só necessário se todas as outras etapas falharem.</p>
+
+
+</body>
+    </div>
+     <div id="tpl-subj1-28">
+     <h2>Aula 28 – AMC - Praticando para a apresentação do desafio</h2>
+      <p>Praticamos e finalizamos o desafio da semana.</p>
+    </div>
+    <div id="tpl-subj1-29">
+     <h2>Aula 29 – AMC - Atividade prática: PC liga mas não dá imagem</h2>
+      <h1>Diagnóstico: PC liga mas não dá vídeo</h1>
+
+  <h2>1. Primeiro passo (o mais lógico)</h2>
+  <p>Verifique o que é mais simples antes de abrir o PC:</p>
+  <ul>
+    <li>O monitor está ligado?</li>
+    <li>O cabo (HDMI / VGA / DisplayPort) está bem conectado no monitor e na placa de vídeo ou na placa-mãe?</li>
+    <li>Tente outro cabo ou outra entrada do monitor.</li>
+  </ul>
+
+  <h2>2. Dentro do PC — passo a passo</h2>
+
+  <h3>2.1 Verificar a memória RAM</h3>
+  <p>É a causa mais comum:</p>
+  <ol>
+    <li>Desligue o PC e retire da tomada.</li>
+    <li>Retire os pentes de RAM.</li>
+    <li>Limpe os contatos com uma borracha branca ou assopre os slots.</li>
+    <li>Recoloque e teste um pente por vez.</li>
+    <li>Troque o slot para testar.</li>
+  </ol>
+  <p>Se for RAM, o PC pode ligar, não mostrar vídeo e/ou emitir bipes.</p>
+
+  <h3>2.2 Verificar a placa de vídeo (GPU dedicada)</h3>
+  <ol>
+    <li>Verifique se a placa está bem encaixada no slot PCIe.</li>
+    <li>Remova e recoloque a placa de vídeo.</li>
+    <li>Se o processador tem vídeo integrado, conecte o cabo ao monitor na saída da placa-mãe para testar sem a GPU.</li>
+    <li>Se der vídeo pela placa-mãe, o problema é provavelmente a GPU.</li>
+  </ol>
+
+  <h3>2.3 Resetar a BIOS / CMOS</h3>
+  <ol>
+    <li>Desligue o PC.</li>
+    <li>Localize a bateria redonda na placa-mãe.</li>
+    <li>Retire a bateria por 10 a 20 segundos e coloque novamente.</li>
+    <li>Isso restaura as configurações padrão da BIOS.</li>
+  </ol>
+
+  <h3>2.4 Testar a fonte de alimentação</h3>
+  <ol>
+    <li>Verifique se os cabos 24 pinos e 8 pinos da CPU estão firmes.</li>
+    <li>Observe se os coolers (CPU, gabinete) giram normalmente ao ligar.</li>
+    <li>Se possível, teste com outra fonte de alimentação.</li>
+  </ol>
+
+  <h3>2.5 Verificar o processador (último recurso)</h3>
+  <p>Mais raro, mas pode acontecer:</p>
+  <ul>
+    <li>Verifique se o cooler do processador está bem preso.</li>
+    <li>Somente mexa no processador se tiver experiência.</li>
+  </ul>
+
+  <h2>Resumo rápido</h2>
+  <ol>
+    <li>Cabo e monitor</li>
+    <li>Memória RAM (limpar e testar)</li>
+    <li>Placa de vídeo (reencaixar ou testar sem ela)</li>
+    <li>Resetar BIOS</li>
+    <li>Fonte</li>
+    <li>Processador (último recurso)</li>
+  </ol>
+    </div>
+    <div id="tpl-subj1-30">
+     <h2>Aula 30 – AMC - Pesquisa: Por que o endereço 192.168.0.1 é muito usado em casas?</h2>
+       <h1>Por que o endereço 192.168.0.1 é amplamente usado em casas?</h1>
+
+  <p>O motivo é simples: 192.168.0.1 pertence a uma faixa reservada para redes privadas e foi adotado por muitos fabricantes de roteadores como padrão por ser prático e fácil de lembrar.</p>
+
+  <h2>1. Faz parte das faixas de IP privadas</h2>
+  <p>A RFC 1918 define três faixas que não são roteadas na Internet pública e servem apenas para redes internas:</p>
+  <ul>
+    <li>10.0.0.0 a 10.255.255.255</li>
+    <li>172.16.0.0 a 172.31.255.255</li>
+    <li>192.168.0.0 a 192.168.255.255</li>
+  </ul>
+
+  <h2>2. Fabricantes escolhem um IP padrão para o roteador</h2>
+  <p>O roteador precisa de um endereço fixo na rede local. Muitos fabricantes adotaram endereços fáceis de lembrar, por exemplo:</p>
+  <ul>
+    <li>192.168.0.1 — muito comum (TP-Link, D-Link, etc.)</li>
+    <li>192.168.1.1 — também muito comum (ASUS, Linksys)</li>
+    <li>10.0.0.1 — usado por algumas operadoras</li>
+  </ul>
+  <p>192.168.0.1 se tornou popular porque foi amplamente usado desde os primeiros roteadores domésticos.</p>
+
+  <h2>3. É fácil de lembrar e reduz conflitos</h2>
+  <p>Redes do tipo 192.168.0.x são simples e têm pouca chance de conflito com redes externas ou corporativas, o que facilita a configuração doméstica.</p>
+
+  <h2>Conclusão</h2>
+  <p>192.168.0.1 é comum porque é privado, prático e muitos fabricantes escolheram esse valor como padrão — e isso se espalhou.</p>
+ 
+  <div id="tpl-subj1-31">
+     <h2>Aula 31 – AMC - Teste de fonte</h2>
+       <h1>Teste de Fonte ATX — Jumper e Medição</h1>
+
+  <p>O procedimento principal demonstrado é ligar a fonte sem estar conectada à placa-mãe (fazer um jumper) e, em seguida, medir a tensão fornecida utilizando um multímetro.</p>
+
+  <h2>Procedimento para ligar a fonte (Jumper)</h2>
+  <p>Para ligar a fonte ATX fora do computador, faça um curto entre dois fios específicos do conector ATX (20 ou 24 pinos):</p>
+  <ol>
+    <li><strong>Localize os fios:</strong> Encontre o fio <em>verde</em> (PS_ON) e um fio <em>preto</em> (massa/ground) no conector ATX. No exemplo, o fio preto e o fio verde correspondiam ao terceiro e quarto furos do conector, mas a posição pode variar dependendo do conector — confirme visualmente.</li>
+    <li><strong>Faça a conexão (Jumper):</strong> Use um fio com as pontas decapadas (ou um jumper apropriado) para conectar o pino do fio verde ao pino de um fio preto (massa).</li>
+    <li><strong>Ligar:</strong> Ao realizar essa conexão e alimentar a fonte na tomada, a fonte deverá ligar — você normalmente ouvirá o cooler da própria fonte girando.</li>
+  </ol>
+
+  <h3>Atenção</h3>
+  <ul>
+    <li>Conecte o fio correto: ligar pinos errados pode danificar a fonte ou causar curto.</li>
+    <li>Não use clipes de papel: clipes podem abrir o conector metálico e causar mau contato. Prefira um fio ou jumper apropriado com isolamento.</li>
+    <li>Se você não tem experiência com eletrônica, peça ajuda a alguém qualificado.</li>
+    <li>Trabalhe em superfície isolada e evite tocar em partes metálicas enquanto a fonte estiver energizada.</li>
+  </ul>
+
+  <h2>Medindo a tensão com o multímetro</h2>
+  <p>Depois de ligar a fonte com o jumper, confirme a saída usando um multímetro em tensão contínua (DC):</p>
+  <ol>
+    <li><strong>Configuração inicial:</strong> Antes de ligar a fonte, com o multímetro ligado e na escala DC, o mostrador deve indicar ~0,00 V se você colocar as pontas entre dois pontos sem energia.</li>
+    <li><strong>Medição:</strong> Com a fonte ligada (jumper feito), meça entre o fio preto (massa) e o fio correspondente ao barramento que quer testar. Exemplos comuns:
+      <ul>
+        <li><strong>+12 V:</strong> fio <em>amarelo</em> → deve marcar ~12 V (ex.: 12,03 V no exemplo).</li>
+        <li><strong>+5 V:</strong> fio <em>vermelho</em> → deve marcar ~5 V.</li>
+        <li><strong>+3.3 V:</strong> fio <em>laranja</em> → deve marcar ~3.3 V.</li>
+      </ul>
+    </li>
+    <li><strong>Desligamento:</strong> Se remover o jumper, a fonte não perde a tensão instantaneamente; ela vai decaindo até desligar totalmente. Aguarde ou verifique a queda de tensão no multímetro.</li>
+  </ol>
+
+  <h2>Observações finais</h2>
+  <p>Esse método permite verificar se a fonte pode ser acionada externamente e se está entregando as tensões esperadas nos barramentos. É uma verificação útil antes de instalar a fonte em um computador ou antes de usá-la como fonte de bancada.</p>
+
+    </div>
+     <div id="tpl-subj1-32">
+     <h2>Aula 32 – AMC - Praticando para a apresentação do desafio</h2>
+      <h1>Papel principal do barramento PCI Express (PCIe)</h1>
+
+  <p>O PCI Express (PCIe) é o barramento de alta velocidade usado em computadores modernos para conectar componentes periféricos diretamente à placa-mãe. Seu papel principal é fornecer um caminho rápido, ponto-a-ponto, para transferência de dados entre a CPU/memória e dispositivos que exigem grande largura de banda.</p>
+
+  <h2>Funções e características chave</h2>
+  <ul>
+    <li><strong>Conectar placas de alto desempenho:</strong> GPUs (placas de vídeo), controladoras NVMe/SSDs, placas de rede de alta velocidade e placas de som usam PCIe por sua grande capacidade de transferência.</li>
+    <li><strong>Largura de banda escalável:</strong> PCIe usa “lanes” (x1, x4, x8, x16). Mais lanes = maior largura de banda. Por exemplo, uma placa gráfica costuma usar x16 para máxima performance.</li>
+    <li><strong>Comunicação ponto-a-ponto:</strong> Diferente de barramentos antigos que partilhavam o mesmo canal, cada dispositivo PCIe tem seu próprio link direto ao chipset ou CPU, reduzindo latência e congestionamento.</li>
+    <li><strong>Baixa latência e alta taxa de transferência:</strong> Projetado para aplicações que precisam mover muitos dados rapidamente — jogos, edição de vídeo, armazenamento ultrarrápido, e servidores de rede.</li>
+    <li><strong>Compatibilidade e versões:</strong> PCIe evolui por gerações (ex.: PCIe 3.0, 4.0, 5.0, 6.0). Cada geração aumenta a velocidade por lane; placas e slots geralmente são compatíveis entre si, mas limitadas pela geração mais baixa presente no sistema.</li>
+  </ul>
+
+  <h2>Por que é importante</h2>
+  <p>Sem o PCIe, dispositivos modernos não teriam a largura de banda necessária para tirar proveito total de seus recursos. É o componente que permite que placas de vídeo ultra-rápidas, SSDs NVMe e adaptadores de rede de alta velocidade entreguem desempenho real ao sistema.</p>
+
+  <h2>Exemplos práticos</h2>
+  <ol>
+    <li>Uma GPU para jogos ou edição de vídeo usa um slot PCIe x16 para transferir grandes volumes de dados entre memória e processador gráfico.</li>
+    <li>Um SSD NVMe em slot M.2 (que usa PCIe) alcança velocidades muito superiores a SSDs SATA porque se comunica diretamente por linhas PCIe.</li>
+    <li>Placas de rede 10/25/40/100 Gbps usam PCIe para enviar e receber pacotes em alta velocidade sem estrangular a CPU.</li>
+  </ol>
+
+  <h2>Resumo rápido</h2>
+  <p>O PCI Express é o barramento de alta velocidade que conecta dispositivos exigentes ao restante do computador, oferecendo links ponto-a-ponto, baixa latência e largura de banda escalável por meio de lanes e gerações.</p>
+    </div>
+    </div>
     <div id="tpl-subj2-1">
        <h2>Aula 1 - NR – Guia de aprendizagem dos alunos</h2>
       <p>Foi feito o planejamento dos conteúdos do bimestre.</p>
@@ -515,6 +903,22 @@
       <h2>Aula 10 – NR - Projeto robo</h2>
       <p>Iniciamos um novo projeto de robotica envolvendo o visor lcd i2l.</p>
     </div>
+    <div id="tpl-subj2-11">
+      <h2>Aula 11 – NR - Projeto robo</h2>
+      <p>Iniciamos um novo projeto de robotica envolvendo o Carro e uma mão mecânica.</p>
+    </div>
+    <div id="tpl-subj2-12">
+      <h2>Aula 12 – NR - Projeto robo</h2>
+      <p>Iniciamos um novo projeto de robotica envolvendo o Carro e uma mão mecânica.</p>
+    </div>
+    <div id="tpl-subj2-13">
+      <h2>Aula 13 – NR - Projeto robo</h2>
+      <p>Iniciamos um novo projeto de robotica envolvendo o Carro e uma mão mecânica.</p>
+    </div>
+    <div id="tpl-subj2-14">
+      <h2>Aula 14 – NR - Projeto robo</h2>
+      <p>Iniciamos um novo projeto de robotica envolvendo o Carro e uma mão mecânica.</p>
+    </div>
     <div id="tpl-subj3-1">
       <h2>Aula 1 - LOG PR – Guia de aprendizagem dos alunos</h2>
       <p>Foi feito o planejamento dos conteúdos do bimestre.</p>
@@ -558,6 +962,129 @@
      <div id="tpl-subj3-11">
      <h2>Aula 11 – LOG PR - Projeto robo</h2>
       <p>Iniciamos um novo projeto de robotica envolvendo o visor lcd i2l.</p>
+    </div>
+     <div id="tpl-subj3-12">
+     <h2>Aula 12 – LOG PR - Projeto robo</h2>
+      <p> <h1>O que é <em>Git commit</em>?</h1>
+
+  <p>
+    Um <strong>commit</strong> no Git é como tirar uma foto do estado atual dos arquivos do repositório.
+    Ele registra mudanças — criando um ponto no histórico que você pode voltar, comparar ou desfazer.
+  </p>
+
+  <h2>Como funciona o processo?</h2>
+  <ol>
+    <li>Você altera arquivos: cria, edita ou remove arquivos.</li>
+    <li>Adiciona ao <em>stage</em> (preparar mudanças para o commit).</li>
+    <li>Faz o commit com uma mensagem que explique a mudança.</li>
+    <li>As mudanças ficam registradas no histórico do projeto.</li>
+  </ol>
+
+  <h2>Comandos essenciais</h2>
+  <p>Adicionar arquivos ao stage:</p>
+  <p>git add .<br>
+  git add nome_do_arquivo</p>
+
+  <p>Fazer o commit com mensagem:</p>
+  <p>git commit -m "Mensagem explicando o que mudou"</p>
+
+  <h2>Por que é importante?</h2>
+  <ul>
+    <li>Permite rastrear o que mudou e quando.</li>
+    <li>Facilita o trabalho em equipe (histórico compartilhado).</li>
+    <li>Permite desfazer alterações sem perder tudo.</li>
+    <li>Ajuda a organizar o desenvolvimento em etapas pequenas e claras.</li>
+  </ul>
+    </div>
+     <div id="tpl-subj3-13">
+     <h2>Aula 13 – LOG PR - Projeto robo</h2>
+      <p>Iniciamos um novo projeto de robotica envolvendo o visor lcd i2l.</p>
+    </div>
+    <div id="tpl-subj3-14">
+     <h2>Aula 14 – LOG PR - Extensão Live Server</h2>
+    <h1>O que é a extensão Live Server?</h1>
+
+  <p>
+    A extensão Live Server é um recurso usado no Visual Studio Code para criar um servidor local que permite visualizar páginas HTML diretamente no navegador.
+  </p>
+
+  <p>
+    Seu principal objetivo é atualizar automaticamente o navegador sempre que um arquivo é salvo no editor, evitando que o usuário precise recarregar a página manualmente.
+  </p>
+
+  <p>
+    Isso funciona porque o Live Server monitora os arquivos do projeto. Quando uma mudança é detectada, ele envia um comando para o navegador recarregar a página.
+  </p>
+
+  <p>
+    Essa atualização em tempo real ajuda no desenvolvimento de sites, pois permite ver instantaneamente como as alterações aparecem na página.
+  </p>
+
+  <p>
+    Ele é especialmente útil para trabalhar com HTML, CSS e JavaScript puro, tornando o processo mais rápido e eficiente.
+  </p>
+   <div id="tpl-subj3-15">
+     <h2>Aula 15 – LOG PR - Função Git Clone</h2>
+       <h1>O que é a função Git Clone?</h1>
+
+  <p>
+    O comando <strong>git clone</strong> é utilizado para copiar um repositório inteiro de um servidor remoto,
+    como o GitHub ou GitLab, para o seu computador.
+  </p>
+
+  <p>
+    Ele baixa todos os arquivos, pastas, histórico de commits e branches, criando uma cópia local
+    idêntica ao repositório original.
+  </p>
+
+  <h2>Por que esse comando é importante?</h2>
+
+  <p>
+    Ele é essencial quando você quer começar a trabalhar em um projeto que já existe.
+    Com o git clone, você obtém uma versão completa do repositório e pode editar,
+    fazer commits e enviar suas alterações.
+  </p>
+
+  <h2>O que acontece ao usar o git clone?</h2>
+
+  <ol>
+    <li>O Git baixa todos os dados do repositório remoto.</li>
+    <li>Uma nova pasta é criada no computador com todos os arquivos.</li>
+    <li>O link do repositório original é configurado automaticamente como <em>origin</em>.</li>
+    <li>O projeto fica pronto para ser desenvolvido localmente.</li>
+  </ol>
+
+    </div>
+     <div id="tpl-subj3-16">
+     <h2>Aula 16 – LOG PR - Separar HTML, CSS E JS</h2>
+     <h1>Por que separar HTML, CSS e JS</h1>
+
+  <p>Separar <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong> não é frescura — é <strong>organização inteligente</strong>. Isso deixa seu projeto mais limpo, mais fácil de crescer e muito menos doloroso de manter depois.</p>
+
+  <h2>1. Cada linguagem tem um papel claro</h2>
+  <ul>
+    <li><strong>HTML</strong> → estrutura (o “esqueleto” do site)</li>
+    <li><strong>CSS</strong> → aparência (cores, layout, fontes)</li>
+    <li><strong>JS</strong> → comportamento (interatividade, lógica)</li>
+  </ul>
+  <p>Quando você mistura tudo, fica muito mais difícil entender o que é o quê.</p>
+
+  <h2>2. Manutenção fica <em>muito</em> mais fácil</h2>
+  <p>Se amanhã você quiser trocar apenas o design, você mexe <strong>só no CSS</strong>, sem tocar no resto. Se quiser mudar um texto ou uma tag, mexe <strong>só no HTML</strong>. Se quiser melhorar uma ação do site, mexe <strong>só no JS</strong>. Quando está tudo espalhado no mesmo arquivo, ajustar uma coisa vira caça ao tesouro.</p>
+
+  <h2>3. Reutilização</h2>
+  <p>Um mesmo arquivo CSS pode ser usado por várias páginas. Um mesmo script pode ser reaproveitado em diferentes partes do site. Você economiza tempo e evita duplicação.</p>
+
+  <h2>4. Legibilidade e trabalho em equipe</h2>
+  <p>Mesmo que você programe sozinho, ler um código organizado deixa tudo mais rápido. E se um dia for trabalhar com mais gente, isso passa a ser obrigatório — cada um cuida de uma parte.</p>
+
+  <h2>5. Performance</h2>
+  <p>Navegadores <strong>cacheiam</strong> (guardam) arquivos externos como CSS e JS. Ou seja: o site carrega mais rápido nas próximas visitas. Se tudo estiver dentro do HTML, o navegador precisa recarregar tudo sempre.</p>
+
+  <h2>6. Boas práticas e padrões modernos</h2>
+  <p>Qualquer framework ou ambiente profissional segue essa mesma lógica. React, Vue, Angular, Node, Django… todos pedem organização sólida. Se você aprender isso agora, já está pensando como um dev maduro.</p>
+
+    </div>
     </div>
     <div id="tpl-subj4-1">
       <h2>Aula 1 - POO JAVA – Guia de aprendizagem dos alunos</h2>
@@ -706,9 +1233,422 @@
       <h2>Aula 30 - POO JAVA – Atualização de software</h2>
       <p>Atualizamos o software.</p>
     </div>
-     <div id="tpl-subj4-31">
-      <h2>Aula 31 - POO JAVA – Desafio</h2>
-      <p>Foi feito o desafio.</p>
+     <div id="tpl-subj4-32">
+      <h2>Aula 32 - POO JAVA – Configurar o SDK para o intellij Idea</h2>
+      <h1>Configurar o SDK Java no IntelliJ IDEA</h1>
+
+
+<p>Quando o IntelliJ não tem um <strong>SDK Java</strong> configurado, o projeto não sabe qual versão do Java usar para compilar — por isso o código não compila e muitas classes básicas ficam com erro.</p>
+
+
+<h2>Qual é o problema?</h2>
+<p>O aluno criou o projeto sem escolher o SDK. Sem o SDK o IntelliJ:</p>
+<ul>
+<li>não compila o código;</li>
+<li>não executa o programa;</li>
+<li>não reconhece classes básicas como <code>System</code> ou <code>String</code>.</li>
+</ul>
+
+
+<h2>Como identificar o problema</h2>
+<ol>
+<li>Mensagem no topo: “<em>Project SDK is not defined</em>” ou “<em>No JDK configured for module</em>”.</li>
+<li>Palavras básicas (por exemplo <code>System</code>) aparecem sublinhadas em vermelho.</li>
+<li>Ao tentar rodar: erro do tipo “<em>Cannot run program javac</em>”.</li>
+<li>Em <em>File &gt; Project Structure</em> aparece &lt;No SDK&gt;.</li>
+</ol>
+
+
+<h2>Como resolver</h2>
+<p>Basta configurar o SDK Java no projeto seguindo estes passos:</p>
+<h3>Passo a passo</h3>
+<ol>
+<li>Abra o IntelliJ.</li>
+<li>Vá em <strong>File &gt; Project Structure</strong> (ou pressione <code>Ctrl + Alt + Shift + S</code>).</li>
+<li>Clique em <strong>Project</strong> no menu lateral.</li>
+<li>Em <strong>Project SDK</strong>, selecione a versão do Java que você instalou.</li>
+<li>Se estiver vazio: clique em <strong>Add SDK</strong> &rarr; <strong>JDK</strong> e aponte para a pasta onde o Java está instalado (ex.: <code>C:\Program Files\Java\jdk-xxxx</code>).</li>
+<li>Clique em <strong>Apply</strong> e <strong>OK</strong>.</li>
+</ol>
+
+
+<h2>O que acontece depois</h2>
+<ul>
+<li>O IntelliJ passa a reconhecer o JDK;</li>
+<li>o código deixa de ficar todo vermelho;</li>
+<li>o botão de executar volta a funcionar e o programa compila normalmente.</li>
+</ul>
+    </div>
+    <div id="tpl-subj4-33">
+      <h2>Aula 31 - POO JAVA – Configurar o SDK para o intellij Idea</h2>
+      <h1>Configurar o SDK Java no IntelliJ IDEA</h1>
+
+
+<p>Quando o IntelliJ não tem um <strong>SDK Java</strong> configurado, o projeto não sabe qual versão do Java usar para compilar — por isso o código não compila e muitas classes básicas ficam com erro.</p>
+
+
+<h2>Qual é o problema?</h2>
+<p>O aluno criou o projeto sem escolher o SDK. Sem o SDK o IntelliJ:</p>
+<ul>
+<li>não compila o código;</li>
+<li>não executa o programa;</li>
+<li>não reconhece classes básicas como <code>System</code> ou <code>String</code>.</li>
+</ul>
+
+
+<h2>Como identificar o problema</h2>
+<ol>
+<li>Mensagem no topo: “<em>Project SDK is not defined</em>” ou “<em>No JDK configured for module</em>”.</li>
+<li>Palavras básicas (por exemplo <code>System</code>) aparecem sublinhadas em vermelho.</li>
+<li>Ao tentar rodar: erro do tipo “<em>Cannot run program javac</em>”.</li>
+<li>Em <em>File &gt; Project Structure</em> aparece &lt;No SDK&gt;.</li>
+</ol>
+
+
+<h2>Como resolver</h2>
+<p>Basta configurar o SDK Java no projeto seguindo estes passos:</p>
+<h3>Passo a passo</h3>
+<ol>
+<li>Abra o IntelliJ.</li>
+<li>Vá em <strong>File &gt; Project Structure</strong> (ou pressione <code>Ctrl + Alt + Shift + S</code>).</li>
+<li>Clique em <strong>Project</strong> no menu lateral.</li>
+<li>Em <strong>Project SDK</strong>, selecione a versão do Java que você instalou.</li>
+<li>Se estiver vazio: clique em <strong>Add SDK</strong> &rarr; <strong>JDK</strong> e aponte para a pasta onde o Java está instalado (ex.: <code>C:\Program Files\Java\jdk-xxxx</code>).</li>
+<li>Clique em <strong>Apply</strong> e <strong>OK</strong>.</li>
+</ol>
+
+
+<h2>O que acontece depois</h2>
+<ul>
+<li>O IntelliJ passa a reconhecer o JDK;</li>
+<li>o código deixa de ficar todo vermelho;</li>
+<li>o botão de executar volta a funcionar e o programa compila normalmente.</li>
+</ul>
+    </div>
+    <div id="tpl-subj4-34">
+      <h2>Aula 34 - POO JAVA – Apresentação dos desafios</h2>
+      <p>Foi apresentado os desafios.</p>
+    </div>
+    <div id="tpl-subj4-35">
+      <h2>Aula 35 - POO JAVA – Main Java</h2>
+      <h1>Ponto de entrada em Java</h1>
+
+
+<p>Para que o IntelliJ (ou qualquer outro executor Java) consiga <strong>executar</strong> um programa, o arquivo precisa conter uma <strong>classe pública</strong> com o método:</p>
+
+
+<pre><code>public static void main(String[] args)</code></pre>
+
+
+<h2>Por que isso é necessário?</h2>
+<ul>
+<li><strong>Java é orientado a objetos:</strong> todo código executável fica dentro de classes.</li>
+<li><strong>Método main</strong> é o ponto de entrada padrão — é onde a JVM começa a execução.</li>
+<li><strong>A assinatura do método</strong> precisa ser exatamente essa para que o sistema localize o ponto de entrada.</li>
+</ul>
+
+
+<h2>Por que a classe deve ser pública?</h2>
+<p>Quando você roda a aplicação, o lançador (launcher) precisa acessar a classe de fora do pacote. Tornando-a <code>public</code>, a JVM consegue invocá-la diretamente.</p>
+
+
+<h2>Exemplo mínimo</h2>
+<p>Salve este código em um arquivo chamado <code>Teste.java</code>:</p>
+
+
+<pre><code>public class Teste {
+public static void main(String[] args) {
+System.out.println("Olá, mundo!");
+}
+}
+</code></pre>
+
+
+<h2>O que o IntelliJ faz ao clicar em "Run"</h2>
+<ol>
+<li>Procura por uma classe pública no projeto.</li>
+<li>Procura, dentro dela, o método <code>public static void main(String[] args)</code>.</li>
+<li>Se encontrar, inicia a JVM a partir desse método.</li>
+<li>Se não encontrar, exibe erro informando que não há método main.</li>
+</ol>
+
+
+<h2>Por que cada parte da assinatura existe?</h2>
+<ul>
+<li><code>public</code> — precisa ser acessível externamente pelo launcher;</li>
+<li><code>static</code> — permite executar sem criar uma instância da classe;</li>
+<li><code>void</code> — não retorna valor ao sistema operacional;</li>
+<li><code>String[] args</code> — recebe argumentos de linha de comando.</li>
+</ul>
+    </div>
+    <div id="tpl-subj4-36">
+      <h2>Aula 36 - POO JAVA – Main Java</h2>
+      <h1>Ponto de entrada em Java</h1>
+
+
+<p>Para que o IntelliJ (ou qualquer outro executor Java) consiga <strong>executar</strong> um programa, o arquivo precisa conter uma <strong>classe pública</strong> com o método:</p>
+
+
+<pre><code>public static void main(String[] args)</code></pre>
+
+
+<h2>Por que isso é necessário?</h2>
+<ul>
+<li><strong>Java é orientado a objetos:</strong> todo código executável fica dentro de classes.</li>
+<li><strong>Método main</strong> é o ponto de entrada padrão — é onde a JVM começa a execução.</li>
+<li><strong>A assinatura do método</strong> precisa ser exatamente essa para que o sistema localize o ponto de entrada.</li>
+</ul>
+
+
+<h2>Por que a classe deve ser pública?</h2>
+<p>Quando você roda a aplicação, o lançador (launcher) precisa acessar a classe de fora do pacote. Tornando-a <code>public</code>, a JVM consegue invocá-la diretamente.</p>
+
+
+<h2>Exemplo mínimo</h2>
+<p>Salve este código em um arquivo chamado <code>Teste.java</code>:</p>
+
+
+<pre><code>public class Teste {
+public static void main(String[] args) {
+System.out.println("Olá, mundo!");
+}
+}
+</code></pre>
+
+
+<h2>O que o IntelliJ faz ao clicar em "Run"</h2>
+<ol>
+<li>Procura por uma classe pública no projeto.</li>
+<li>Procura, dentro dela, o método <code>public static void main(String[] args)</code>.</li>
+<li>Se encontrar, inicia a JVM a partir desse método.</li>
+<li>Se não encontrar, exibe erro informando que não há método main.</li>
+</ol>
+
+
+<h2>Por que cada parte da assinatura existe?</h2>
+<ul>
+<li><code>public</code> — precisa ser acessível externamente pelo launcher;</li>
+<li><code>static</code> — permite executar sem criar uma instância da classe;</li>
+<li><code>void</code> — não retorna valor ao sistema operacional;</li>
+<li><code>String[] args</code> — recebe argumentos de linha de comando.</li>
+</ul>
+    </div>
+     <div id="tpl-subj4-37">
+      <h2>Aula 37 - POO JAVA – Apresentação dos desafios</h2>
+      <p>Foi apresentado os desafios.</p>
+    </div>
+    <div id="tpl-subj4-38">
+      <h2>Aula 38 - POO JAVA – Auto-complete Intellij Idea</h2>
+      <h1>Auto-complete do IntelliJ IDEA</h1>
+
+  <p>O <strong>auto-complete</strong> (ou <em>code completion</em>) é a ferramenta que prevê e sugere código enquanto você digita. Serve para acelerar o desenvolvimento e reduzir erros.</p>
+
+  <h2>O que ele faz</h2>
+  <ul>
+    <li><strong>Sugere nomes</strong> de variáveis, funções, classes, métodos e pacotes conforme você digita.</li>
+    <li><strong>Evita erros de digitação e sintaxe</strong>, pois oferece opções válidas no contexto.</li>
+    <li><strong>Entende o contexto</strong> — por exemplo, sugere métodos da classe atual ou tipos compatíveis em uma expressão.</li>
+    <li><strong>Fornece snippets</strong> prontos (como estruturas de <code>for</code>, <code>if</code>, construtores, etc.).</li>
+    <li><strong>Mostra documentação rápida</strong> e parâmetros de métodos enquanto você escreve, ajudando a aprender APIs sem sair do editor.</li>
+  </ul>
+
+  <h2>Como usar</h2>
+  <p>Normalmente acontece automaticamente enquanto você digita. Para forçar a sugestão, use:</p>
+  <ul>
+    <li><strong>Ctrl + Space</strong> — completar básico.</li>
+    <li><strong>Ctrl + Shift + Space</strong> — sugestões mais inteligentes/contextuais.</li>
+  </ul>
+    </div>
+    <div id="tpl-subj4-39">
+      <h2>Aula 39 - POO JAVA – Auto-complete Intellij Idea</h2>
+      <h1>Auto-complete do IntelliJ IDEA</h1>
+
+  <p>O <strong>auto-complete</strong> (ou <em>code completion</em>) é a ferramenta que prevê e sugere código enquanto você digita. Serve para acelerar o desenvolvimento e reduzir erros.</p>
+
+  <h2>O que ele faz</h2>
+  <ul>
+    <li><strong>Sugere nomes</strong> de variáveis, funções, classes, métodos e pacotes conforme você digita.</li>
+    <li><strong>Evita erros de digitação e sintaxe</strong>, pois oferece opções válidas no contexto.</li>
+    <li><strong>Entende o contexto</strong> — por exemplo, sugere métodos da classe atual ou tipos compatíveis em uma expressão.</li>
+    <li><strong>Fornece snippets</strong> prontos (como estruturas de <code>for</code>, <code>if</code>, construtores, etc.).</li>
+    <li><strong>Mostra documentação rápida</strong> e parâmetros de métodos enquanto você escreve, ajudando a aprender APIs sem sair do editor.</li>
+  </ul>
+
+  <h2>Como usar</h2>
+  <p>Normalmente acontece automaticamente enquanto você digita. Para forçar a sugestão, use:</p>
+  <ul>
+    <li><strong>Ctrl + Space</strong> — completar básico.</li>
+    <li><strong>Ctrl + Shift + Space</strong> — sugestões mais inteligentes/contextuais.</li>
+  </ul>
+    </div>
+    <div id="tpl-subj4-40">
+      <h2>Aula 40 - POO JAVA – Apresentação dos desafios</h2>
+      <p>Foi apresentado os desafios.</p>
+    </div>
+    <div id="tpl-subj4-41">
+      <h2>Aula 41 - POO JAVA – Debug e breakpoint</h2>
+      <h1>Debug e Breakpoint em Java</h1>
+
+
+<h2>O que é <em>debug</em>?</h2>
+<p>
+<strong>Debug</strong> é o processo de <em>examinar</em> o seu código enquanto ele está sendo executado,
+linha por linha, para encontrar erros lógicos, comportamentos inesperados ou para entender melhor o fluxo da aplicação.
+</p>
+<p>Ao usar o debug você pode:</p>
+<ul>
+<li>Ver o valor das variáveis em cada passo.</li>
+<li>Acompanhar a ordem real de execução.</li>
+<li>Interromper a execução em pontos específicos.</li>
+<li>Executar passo a passo (step over, step into, step out).</li>
+</ul>
+
+
+<h2>O que é <em>breakpoint</em>?</h2>
+<p>
+Um <strong>breakpoint</strong> é um marcador que você coloca em uma linha do código para dizer ao depurador: "<em>pare aqui</em>".
+Quando o programa alcança essa linha, ele pausa e permite que você inspecione o estado da aplicação naquele instante.
+</p>
+<p>Com um breakpoint ativo você pode:</p>
+<ul>
+<li>Ver os valores das variáveis no momento da pausa.</li>
+<li>Prosseguir linha a linha ou continuar até o próximo breakpoint.</li>
+<li>Entrar em funções chamadas (step into) para investigar mais a fundo.</li>
+</ul>
+
+
+<h2>Exemplo simples (Java)</h2>
+<pre><code>
+int a = 10;
+int b = 0;
+int c = a / b;
+System.out.println(c);
+</code></pre>
+<p>
+Se você colocar um <em>breakpoint</em> na linha <code>int c = a / b;</code> e rodar em modo debug,
+a execução pausa antes de realizar a divisão. Você pode observar que <code>b</code> vale <code>0</code> e
+identificar imediatamente que ocorrerá uma <em>exceção de divisão por zero</em>, sem deixar o programa falhar sem controle.
+</p>
+
+
+<h2>Resumo rápido</h2>
+<p>
+<strong>Debug</strong>: modo de execução que permite inspecionar e controlar o programa enquanto ele roda.<br>
+<strong>Breakpoint</strong>: ponto de parada definido pelo desenvolvedor para pausar a execução e investigar o estado do programa.
+</p>
+    </div>
+    <div id="tpl-subj4-42">
+      <h2>Aula 42 - POO JAVA – Debug e breakpoint</h2>
+      <h1>Debug e Breakpoint em Java</h1>
+
+
+<h2>O que é <em>debug</em>?</h2>
+<p>
+<strong>Debug</strong> é o processo de <em>examinar</em> o seu código enquanto ele está sendo executado,
+linha por linha, para encontrar erros lógicos, comportamentos inesperados ou para entender melhor o fluxo da aplicação.
+</p>
+<p>Ao usar o debug você pode:</p>
+<ul>
+<li>Ver o valor das variáveis em cada passo.</li>
+<li>Acompanhar a ordem real de execução.</li>
+<li>Interromper a execução em pontos específicos.</li>
+<li>Executar passo a passo (step over, step into, step out).</li>
+</ul>
+
+
+<h2>O que é <em>breakpoint</em>?</h2>
+<p>
+Um <strong>breakpoint</strong> é um marcador que você coloca em uma linha do código para dizer ao depurador: "<em>pare aqui</em>".
+Quando o programa alcança essa linha, ele pausa e permite que você inspecione o estado da aplicação naquele instante.
+</p>
+<p>Com um breakpoint ativo você pode:</p>
+<ul>
+<li>Ver os valores das variáveis no momento da pausa.</li>
+<li>Prosseguir linha a linha ou continuar até o próximo breakpoint.</li>
+<li>Entrar em funções chamadas (step into) para investigar mais a fundo.</li>
+</ul>
+
+
+<h2>Exemplo simples (Java)</h2>
+<pre><code>
+int a = 10;
+int b = 0;
+int c = a / b;
+System.out.println(c);
+</code></pre>
+<p>
+Se você colocar um <em>breakpoint</em> na linha <code>int c = a / b;</code> e rodar em modo debug,
+a execução pausa antes de realizar a divisão. Você pode observar que <code>b</code> vale <code>0</code> e
+identificar imediatamente que ocorrerá uma <em>exceção de divisão por zero</em>, sem deixar o programa falhar sem controle.
+</p>
+
+
+<h2>Resumo rápido</h2>
+<p>
+<strong>Debug</strong>: modo de execução que permite inspecionar e controlar o programa enquanto ele roda.<br>
+<strong>Breakpoint</strong>: ponto de parada definido pelo desenvolvedor para pausar a execução e investigar o estado do programa.
+</p>
+    </div>
+    <div id="tpl-subj4-43">
+      <h2>Aula 43 - POO JAVA – Apresentação dos desafios</h2>
+      <p>Foi apresentado os desafios.</p>
+    </div>
+     <div id="tpl-subj4-44">
+      <h2>Aula 44 - POO JAVA – Kernel</h2>
+      <h1>O que é o <code>pom.xml</code>?</h1>
+<p>Quando você cria um projeto <strong>Maven</strong> no IntelliJ, o arquivo mais importante que aparece é o <code>pom.xml</code>. Ele é, basicamente, o “cérebro” do projeto.</p>
+
+
+<h2>O que significa POM?</h2>
+<p><strong>POM</strong> significa <em>Project Object Model</em>. Esse arquivo define tudo o que o Maven precisa saber sobre o projeto.</p>
+
+
+<h2>O que o <code>pom.xml</code> contém?</h2>
+<ul>
+<li><strong>Dependências externas</strong>: lista todas as bibliotecas que seu projeto usa, por exemplo JDBC, Spring, JUnit, Gson. O Maven baixa automaticamente.</li>
+<li><strong>Configurações do projeto</strong>: nome, versão, <code>groupId</code>, <code>artifactId</code>, versão do Java, etc.</li>
+<li><strong>Plugins</strong>: ferramentas extras que o Maven usa, como empacotar, rodar testes e gerar relatórios.</li>
+<li><strong>Repositórios</strong>: de onde o Maven baixa dependências (por padrão, o Maven Central).</li>
+</ul>
+
+
+<h2>Como o IntelliJ usa o <code>pom.xml</code></h2>
+<p>O IntelliJ monitora esse arquivo. Sempre que você altera uma dependência, ele automaticamente baixa os JARs, atualiza o classpath do projeto e integra ao autocomplete e ao processo de build.</p>
+
+
+
+<p><strong>Resumo rápido:</strong> o <code>pom.xml</code> organiza o projeto, controla dependências, automatiza builds e mantém tudo padronizado.</p>
+    </div>
+    <div id="tpl-subj4-45">
+      <h2>Aula 45 - POO JAVA – Kernel</h2>
+      <h1>O que é o <code>pom.xml</code>?</h1>
+<p>Quando você cria um projeto <strong>Maven</strong> no IntelliJ, o arquivo mais importante que aparece é o <code>pom.xml</code>. Ele é, basicamente, o “cérebro” do projeto.</p>
+
+
+<h2>O que significa POM?</h2>
+<p><strong>POM</strong> significa <em>Project Object Model</em>. Esse arquivo define tudo o que o Maven precisa saber sobre o projeto.</p>
+
+
+<h2>O que o <code>pom.xml</code> contém?</h2>
+<ul>
+<li><strong>Dependências externas</strong>: lista todas as bibliotecas que seu projeto usa, por exemplo JDBC, Spring, JUnit, Gson. O Maven baixa automaticamente.</li>
+<li><strong>Configurações do projeto</strong>: nome, versão, <code>groupId</code>, <code>artifactId</code>, versão do Java, etc.</li>
+<li><strong>Plugins</strong>: ferramentas extras que o Maven usa, como empacotar, rodar testes e gerar relatórios.</li>
+<li><strong>Repositórios</strong>: de onde o Maven baixa dependências (por padrão, o Maven Central).</li>
+</ul>
+
+
+<h2>Como o IntelliJ usa o <code>pom.xml</code></h2>
+<p>O IntelliJ monitora esse arquivo. Sempre que você altera uma dependência, ele automaticamente baixa os JARs, atualiza o classpath do projeto e integra ao autocomplete e ao processo de build.</p>
+<p><strong>Resumo rápido:</strong> o <code>pom.xml</code> organiza o projeto, controla dependências, automatiza builds e mantém tudo padronizado.</p>
+    </div>
+    <div id="tpl-subj4-46">
+      <h2>Aula 46 - POO JAVA – Apresentação dos desafios</h2>
+      <p>Foi apresentado os desafios.</p>
+    </div>
+    <div id="tpl-subj4-47">
+      <h2>Aula 47 - POO JAVA – </h2>
+      <p>Foi apresentado os desafios.</p>
     </div>
      <div id="tpl-subj5-1">
       <h2>Aula 1 - PROG WEB – Guia de aprendizagem dos alunos</h2>
@@ -899,8 +1839,52 @@
       <p>Continuação do projeto do site de materias de vestibular</p>
     </div>
      <div id="tpl-subj5-21">
-      <h2>Aula 21 – PROG WEB - Atualizar matérias pendentes</h2>
-      <p>Foram atualizadas as matérias pendentes</p>
+      <h2>Aula 21 – PROG WEB - Preparar 4° Bimestre </h2>
+      <p>Foi organizado o 4° bimestre no site</p>
+    </div>
+     <div id="tpl-subj5-22">
+      <h2>Aula 22 – PROG WEB - Preparar 4° Bimestre </h2>
+      <p>Foi organizado o 4° bimestre no site</p>
+    </div>
+     <div id="tpl-subj5-23">
+      <h2>Aula 23 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-24">
+      <h2>Aula 24 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-25">
+      <h2>Aula 25 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-26">
+      <h2>Aula 26 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-27">
+      <h2>Aula 27 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-28">
+      <h2>Aula 28 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-29">
+      <h2>Aula 29 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-30">
+      <h2>Aula 30 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-31">
+      <h2>Aula 31 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
+    </div>
+     <div id="tpl-subj5-32">
+      <h2>Aula 32 – PROG WEB - Atualizar o site</h2>
+      <p>Continuação do projeto do site de materias de vestibular</p>
     </div>
      <div id="tpl-subj6-1">
      <h2>Aula 1 - HTML e CSS – Guia de aprendizagem dos alunos</h2>
@@ -959,6 +1943,26 @@
      <h2>Aula 10 - HTML e CSS – Site</h2>
       <p>Foi feito a continuação do projeto do site de matérias do vestibular.</p>
     </div>
+    <div id="tpl-subj6-11">
+     <h2>Aula 11 - HTML e CSS – Praticar desafio para sexta</h2>
+      <p>Praticamos os desafios para sexta.</p>
+    </div>
+    <div id="tpl-subj6-12">
+     <h2>Aula 12 - HTML e CSS – Video Python</h2>
+      <p>Vimos o vídeo de Python.</p>
+    </div>
+    <div id="tpl-subj6-13">
+     <h2>Aula 13 - HTML e CSS – Video Python</h2>
+      <p>Vimos o vídeo de Python.</p>
+    </div>
+    <div id="tpl-subj6-14">
+     <h2>Aula 14 - HTML e CSS – Lista de atividade python</h2>
+      <p>Fizemos atividade de fixação de Python.</p>
+    </div>
+    <div id="tpl-subj6-15">
+     <h2>Aula 15 - HTML e CSS – Lista de atividade python</h2>
+      <p>Fizemos atividade de fixação de Python.</p>
+    </div>
     <div id="tpl-subj7-1">
       <h2>Aula 1 – GT - Guia de aprendizagem.</h2>
       <p>Foi feito o planejamento dos conteúdos do bimestre.</p>
@@ -1010,6 +2014,22 @@
     </div>
      <div id="tpl-subj7-13">
       <h2>Aula 13 – GT - Decisão do próximo desafio.</h2>
+      <p>Foi decidido o próximo desafio.</p>
+    </div>
+    <div id="tpl-subj7-14">
+      <h2>Aula 14 – GT - Decisão do próximo desafio.</h2>
+      <p>Foi decidido o próximo desafio.</p>
+    </div>
+    <div id="tpl-subj7-15">
+      <h2>Aula 15 – GT - Decisão do próximo desafio.</h2>
+      <p>Foi decidido o próximo desafio.</p>
+    </div>
+    <div id="tpl-subj7-16">
+      <h2>Aula 16 – GT - Decisão do próximo desafio.</h2>
+      <p>Foi decidido o próximo desafio.</p>
+    </div>
+    <div id="tpl-subj7-17">
+      <h2>Aula 17 – GT - Decisão do próximo desafio.</h2>
       <p>Foi decidido o próximo desafio.</p>
     </div>
      <div id="tpl-subj8-1">
@@ -1140,8 +2160,420 @@
       <p>Foi feito o desafio: criar uma imagem motivadora para o Saeb</p>
     </div>
        <div id="tpl-subj8-21">
-     <h2>Aula 21 – SO - SO</h2>
-      <p>Foi aprofundado o conteudo de SO</p>
+     <h2>Aula 21 – SO - Interromper atualizações do Windows 10</h2>
+      <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Interrupção de Atualizações do Windows 10</title>
+</head>
+<body>
+
+<h1>Interrupção de Atualizações do Windows 10</h1>
+
+<h2>O que é a interrupção de atualizações?</h2>
+<p>É quando o Windows Update não consegue concluir o download, instalação ou configuração das atualizações, fazendo com que o processo seja pausado, travado ou revertido.</p>
+
+<h2>Principais motivos para a interrupção</h2>
+
+<h3>1. Falta de espaço no disco</h3>
+<p>Atualizações grandes precisam de espaço temporário. Sem espaço suficiente, o processo é interrompido.</p>
+
+<h3>2. Problemas na conexão com a internet</h3>
+<p>Uma conexão instável pode travar ou parar o download das atualizações.</p>
+
+<h3>3. Arquivos do Windows Update corrompidos</h3>
+<p>Isso acontece quando o computador desliga durante a atualização ou quando o cache do Windows Update é danificado.</p>
+
+<h3>4. Incompatibilidade de drivers ou hardware</h3>
+<p>Drivers desatualizados ou incompatíveis podem fazer o Windows cancelar a instalação para evitar falhas.</p>
+
+<h3>5. Serviços desativados</h3>
+<p>Serviços essenciais como Windows Update ou BITS, se desativados, impedem que as atualizações sejam concluídas.</p>
+
+<h3>6. Antivírus interferindo</h3>
+<p>Alguns antivírus bloqueiam arquivos necessários, causando falhas na atualização.</p>
+
+<h2>Consequências de interrupções frequentes</h2>
+<p>O sistema pode ficar vulnerável, instável, sem correções de falhas, e sujeito a erros e incompatibilidades com programas novos.</p>
+
+<h2>Como resolver quando as atualizações travam</h2>
+
+<h3>1. Reiniciar o computador</h3>
+<p>Frequentemente resolve problemas simples de atualização.</p>
+
+<h3>2. Usar o Solucionador de Problemas</h3>
+<p>O Windows possui uma ferramenta que identifica e corrige falhas básicas nas atualizações.</p>
+
+<h3>3. Limpar o cache do Windows Update</h3>
+<p>Apagar a pasta SoftwareDistribution e reiniciar os serviços costuma corrigir arquivos corrompidos.</p>
+
+<h3>4. Atualizar drivers</h3>
+<p>Drivers antigos podem impedir a instalação de certas atualizações.</p>
+
+<h3>5. Baixar a atualização manualmente</h3>
+<p>É possível baixar a atualização pelo Microsoft Update Catalog e instalar manualmente.</p>
+
+<h3>6. Usar o Assistente de Atualização do Windows 10</h3>
+<p>Ferramenta oficial que força a instalação de atualizações de versão.</p>
+
+<h2>Como pausar atualizações corretamente</h2>
+<p>O Windows permite pausar atualizações por 7 a 35 dias nas Configurações, evitando interrupções durante o uso.</p>
+
+</body>
+</html>
+
+    </div>
+    <div id="tpl-subj8-22">
+     <h2>Aula 22 – SO - Transferência de arquivos - Windows vs Linux</h2>
+      <h1>Diferença de Transferência de Arquivos - Windows vs Linux</h1>
+
+<h2>1. Sistema de Arquivos</h2>
+<p>Windows utiliza NTFS, FAT32 e exFAT. Linux utiliza EXT4, XFS e Btrfs. Ao mover arquivos no mesmo disco, ambos só ajustam ponteiros, mas ao copiar entre sistemas diferentes o desempenho muda.</p>
+
+<h2>2. Protocolos de Transferência</h2>
+<h3>Windows</h3>
+<p>Usa principalmente SMB/CIFS. Também pode transferir via RDP, FTP ou SFTP.</p>
+
+<h3>Linux</h3>
+<p>Usa SCP e SFTP via SSH, além de NFS. Também utiliza SMB com Samba, mas não é o padrão.</p>
+
+<h2>3. Linha de Comando</h2>
+<p>Windows utiliza copy, xcopy, robocopy e PowerShell. Linux utiliza cp, mv e o avançado rsync, que copia apenas partes modificadas de arquivos.</p>
+
+<h2>4. Permissões</h2>
+<p>Windows usa ACLs de usuários e grupos. Linux usa permissões rwx, dono, grupo e ACLs, preservando permissões ao transferir entre sistemas Linux.</p>
+
+<h2>5. Caminhos e Nomes</h2>
+<p>Windows usa caminhos como C:\pasta\arquivo.txt e não diferencia maiúsculas e minúsculas. Linux usa caminhos como /home/user/arquivo.txt e diferencia nomes.</p>
+
+<h2>6. Velocidade e Estabilidade</h2>
+<p>Linux costuma ser mais rápido em servidores devido ao rsync, SSH e NFS. Windows funciona bem com SMB em redes domésticas.</p>
+
+<h2>Resumo</h2>
+<p>Windows foca em facilidade em redes domésticas com SMB, enquanto Linux oferece melhor desempenho e controle em servidores usando SSH e rsync.</p>
+
+    </div>
+    <div id="tpl-subj8-23">
+     <h2>Aula 23 – SO - SO</h2>
+      <h1>Comandos Equivalentes: Linux ls e Windows dir</h1>
+
+<h2>1. Propósito dos Comandos</h2>
+<p>Os comandos ls no Linux e dir no Windows servem para listar arquivos e pastas dentro de um diretório. Ambos têm a mesma função principal, mas funcionam de acordo com as características de cada sistema operacional.</p>
+
+<h2>2. Origem dos Comandos</h2>
+
+<h3>Linux - ls</h3>
+<p>O comando ls vem do UNIX e significa "list". É um comando básico do shell e foi criado para ser simples e rápido.</p>
+
+<h3>Windows - dir</h3>
+<p>O comando dir vem do MS-DOS e significa "directory". Continua sendo o padrão do Prompt de Comando do Windows.</p>
+
+<h2>3. Como Cada Um Mostra as Informações</h2>
+
+<h3>Linux - ls</h3>
+<p>Mostra arquivos, pastas, permissões, dono, tamanho e data de modificação. Por padrão, exibe apenas nomes simples.</p>
+
+<h3>Windows - dir</h3>
+<p>Mostra data, hora, tamanho, diretórios, arquivos e o espaço livre no disco, além de um cabeçalho com o caminho atual.</p>
+
+<h2>4. Diferença na Sintaxe</h2>
+<p>No Linux, ls usa opções com o caractere "-". No Windows, dir usa opções com "/".</p>
+
+<h3>Exemplos no Linux</h3>
+<p>ls -l (detalhado)<br>ls -a (arquivos ocultos)</p>
+
+<h3>Exemplos no Windows</h3>
+<p>dir /w (largura reduzida)<br>dir /a (arquivos ocultos)</p>
+
+<h2>5. Arquivos Ocultos</h2>
+<p>No Linux, arquivos ocultos começam com um ponto, como .config. No Windows, o atributo de oculto define se o arquivo é invisível. Ambos os comandos precisam de opções extras para mostrar esses arquivos.</p>
+
+<h2>6. Uso Prático</h2>
+<p>No Linux, ls é o padrão absoluto. No Windows, dir é usado no Prompt de Comando, mas no PowerShell o comando equivalente é Get-ChildItem.</p>
+
+<h2>Resumo</h2>
+<p>ls e dir são comandos equivalentes que listam arquivos, mas seguem estilos diferentes por causa das origens dos sistemas UNIX e MS-DOS.</p>
+
+    </div>
+    <div id="tpl-subj8-24">
+      <h2>Aula 24 – SO - Comando kill no linux</h2>
+      <h1>Comando kill no Linux</h1>
+
+<h2>O que é o comando kill?</h2>
+<p>O comando kill é usado no Linux para enviar sinais a um processo. Sua função mais comum é encerrar um processo travado quando o usuário já conhece o PID do processo.</p>
+
+<h2>Como o comando funciona?</h2>
+<p>Cada processo no Linux possui um número único chamado PID. Para encerrar um processo, basta usar o comando kill seguido do PID:</p>
+<p>Exemplo: kill 1234</p>
+
+<h2>Sinal padrão enviado pelo kill</h2>
+<p>Quando usado sem opções, o kill envia o sinal SIGTERM (15). Esse sinal pede para o processo encerrar de forma segura, permitindo que ele salve dados e libere recursos.</p>
+
+<h2>Encerrando um processo que não responde</h2>
+<p>Se o processo ignorar o SIGTERM, é possível forçar o encerramento usando o sinal SIGKILL (9), que não pode ser ignorado:</p>
+<p>Exemplo: kill -9 1234</p>
+
+<h2>Diferença entre SIGTERM e SIGKILL</h2>
+<p>SIGTERM (15) encerra o processo educadamente e pode ser ignorado. SIGKILL (9) encerra o processo imediatamente e não pode ser ignorado.</p>
+
+<h2>Como descobrir o PID</h2>
+<p>Alguns comandos úteis para identificar o PID de um processo são:</p>
+<p>ps aux<br>top<br>pgrep nome_do_programa</p>
+
+<h2>Exemplo prático</h2>
+<p>Se o processo firefox travar, primeiro encontre o PID usando pgrep firefox. Depois tente encerrar com kill PID. Se não funcionar, use kill -9 PID.</p>
+
+    </div>
+    <div id="tpl-subj8-25">
+     <h2>Aula 25 – SO - Desafio</h2>
+      <p>Foi feito o desafio.</p>
+    </div>
+    <div id="tpl-subj8-26">
+     <h2>Aula 26 – SO - Diferença entre NTFS e EXT4</h2>
+      <h1>Diferença entre NTFS e EXT4</h1>
+
+<h2>1. Sistema Operacional Padrão</h2>
+<p>NTFS é usado principalmente no Windows. EXT4 é usado na maioria das distribuições Linux.</p>
+
+<h2>2. Estrutura e Propósito</h2>
+<p>NTFS foi criado para estabilidade, segurança e controle avançado de permissões. EXT4 foi criado para ser rápido, leve e confiável em sistemas Linux.</p>
+
+<h2>3. Desempenho</h2>
+<p>EXT4 costuma ser mais rápido para leitura e escrita. NTFS é bem otimizado no Windows, mas pode ser mais lento no Linux.</p>
+
+<h2>4. Compatibilidade</h2>
+<p>Windows lê e escreve NTFS nativamente, mas não lê EXT4 sem programas adicionais. Linux lê e escreve EXT4 nativamente e também consegue trabalhar com NTFS, porém com menor desempenho.</p>
+
+<h2>5. Recursos Suportados</h2>
+<h3>NTFS</h3>
+<p>Possui permissões avançadas, criptografia, compressão, journaling completo, cotas de disco e sistema de logs robusto.</p>
+
+<h3>EXT4</h3>
+<p>Possui journaling leve, baixo nível de fragmentação, suporte a arquivos grandes e desempenho otimizado.</p>
+
+<h2>6. Tolerância a Falhas</h2>
+<p>Ambos usam journaling. NTFS possui um sistema de logs mais detalhado, enquanto EXT4 foca em desempenho com recuperação rápida.</p>
+
+<h2>7. Limites Técnicos</h2>
+<p>NTFS suporta arquivos de até 16 TB e partições de até 256 TB. EXT4 pode suportar arquivos de até 16 TB e partições muito maiores, dependendo da configuração.</p>
+
+<h2>8. Uso Recomendado</h2>
+<p>NTFS é recomendado para Windows, ambientes corporativos e dispositivos externos voltados ao Windows. EXT4 é recomendado para Linux, servidores e sistemas que priorizam velocidade.</p>
+
+<h2>Resumo</h2>
+<p>NTFS é mais completo e seguro para Windows. EXT4 é mais rápido e eficiente para Linux.</p>
+
+    </div>
+    <div id="tpl-subj8-27">
+     <h2>Aula 27 – SO - Instalaçao de software Linux </h2>
+      <h1>Instalação de Softwares - Linux vs Windows</h1>
+
+<h2>1. Forma de distribuição</h2>
+<p>No Linux, programas são distribuídos majoritariamente por <strong>repositórios oficiais</strong> da distribuição e instalados via gerenciadores de pacotes (apt, yum/dnf, pacman). No Windows, programas costumam ser baixados de sites individuais e instalados via arquivos .exe ou .msi.</p>
+
+<h2>2. Segurança</h2>
+<p>Linux: pacotes assinados e verificados reduzem muito o risco de malware. Windows: depende da fonte do instalador — baixar de sites desconhecidos aumenta o risco.</p>
+
+<h2>3. Dependências</h2>
+<p>Linux: o gerenciador de pacotes resolve automaticamente dependências (bibliotecas e componentes). Windows: instaladores podem embutir dependências; conflitos e instalações manuais de DLLs são mais comuns.</p>
+
+<h2>4. Atualização</h2>
+<p>Linux: atualiza sistema e aplicativos centralmente com um comando (ex.: apt update && apt upgrade). Windows: cada aplicativo costuma gerenciar suas próprias atualizações ou depende do usuário.</p>
+
+<h2>5. Remoção</h2>
+<p>Linux: remoção via gerenciador (ex.: apt remove) costuma eliminar arquivos e dependências órfãs. Windows: desinstaladores frequentemente deixam arquivos, pastas e entradas de registro.</p>
+
+<h2>6. Administração em larga escala</h2>
+<p>Linux facilita automação e gerenciamento em muitos computadores (scripts, repositórios internos, ferramentas de configuração). No Windows, há ferramentas corporativas, mas o modelo distribuído de instaladores complica automação simples.</p>
+
+<h2>7. Experiência do usuário</h2>
+<p>Linux: padrão consistente e previsível para instalações. Windows: maior variedade de instaladores e interfaces, mais escolhas para o usuário final (mas menos padronização).</p>
+
+<h2>Resumo</h2>
+<p>Linux usa gerenciadores de pacotes (apt, yum, dnf, pacman) porque traz segurança, padronização, resolução automática de dependências, atualizações centralizadas e remoção limpa. Windows prioriza liberdade de distribuição (instaladores individuais), o que dá mais flexibilidade ao desenvolvedor, mas exige mais cuidado do usuário para manter segurança e limpeza do sistema.</p>
+
+    </div>
+    <div id="tpl-subj8-28">
+     <h2>Aula 28 – SO - Desafio</h2>
+      <h1>VirtualBox e Seus Semelhantes</h1>
+
+<h2>O que é o VirtualBox?</h2>
+<p>VirtualBox é um programa que cria e executa <strong>máquinas virtuais</strong> — computadores simulados dentro do seu computador real. Dentro da máquina virtual você pode instalar sistemas operacionais (Windows, Linux, BSD, etc.) sem alterar o sistema principal.</p>
+
+<h2>Para que serve?</h2>
+<ul>
+    <li><strong>Testar sistemas operacionais</strong> sem precisar formatar ou particionar o disco.</li>
+    <li><strong>Isolamento</strong>: testar programas ou arquivos suspeitos numa sandbox separada do sistema host.</li>
+    <li><strong>Ambientes de desenvolvimento</strong> e aprendizado (servidores, redes, configurações).</li>
+    <li><strong>Compatibilidade</strong>: rodar software que só existe para outro sistema operacional.</li>
+    <li><strong>Simulação de redes</strong> e topologias para aprendizado ou testes.</li>
+</ul>
+
+<h2>Principais alternativas</h2>
+<p>Existem outros hipervisores/softwares de virtualização com características diferentes:</p>
+<ul>
+    <li><strong>VMware Workstation / Player</strong> — mais desempenho e recursos profissionais.</li>
+    <li><strong>Hyper-V</strong> (Microsoft) — integrado ao Windows Pro/Enterprise, bom para ambientes corporativos.</li>
+    <li><strong>QEMU + KVM</strong> — comum em servidores Linux, excelente desempenho e flexibilidade.</li>
+    <li><strong>Parallels</strong> — popular em macOS para rodar Windows e outros sistemas.</li>
+</ul>
+
+<h2>Tipos de virtualização</h2>
+<p>Existem dois modelos principais:</p>
+<ul>
+    <li><strong>Virtualização completa</strong> — o hipervisor cria uma máquina virtual completa (ex.: VirtualBox, VMware).</li>
+    <li><strong>Virtualização baseada em kernel</strong> — usa recursos do kernel do host para melhor desempenho (ex.: KVM).</li>
+</ul>
+
+<h2>Vantagens</h2>
+<ul>
+    <li>Isolamento e segurança.</li>
+    <li>Facilidade para testar e reproduzir ambientes.</li>
+    <li>Economia de hardware (vários VMs em um host).</li>
+    <li>Snapshots e restauração rápida do estado da VM.</li>
+</ul>
+
+<h2>Desvantagens</h2>
+<ul>
+    <li>Overhead de desempenho comparado ao hardware nativo.</li>
+    <li>Requer recursos (RAM, CPU, espaço em disco) para cada VM.</li>
+    <li>Configuração avançada pode ser complexa (redes, armazenamento, passthrough).</li>
+</ul>
+
+<h2>Resumo</h2>
+<p>VirtualBox e outros hipervisores permitem criar ambientes isolados e flexíveis para testes, desenvolvimento e compatibilidade. A escolha entre VirtualBox, VMware, Hyper-V ou QEMU/KVM depende do desempenho, integração com o sistema host e necessidades específicas.</p>
+
+    </div>
+    <div id="tpl-subj8-29">
+     <h2>Aula 29 – SO - Desafio</h2>
+      <p>Foi feito o desafio.</p>
+    </div>
+    <div id="tpl-subj8-30">
+     <h2>Aula 30 – SO - Kernel</h2>
+      <h1>O que é o Kernel?</h1>
+
+<p>O kernel é o núcleo do sistema operacional, responsável por controlar o hardware e fazer a comunicação entre os programas e os componentes físicos do computador.</p>
+
+<h2>Funções principais</h2>
+<ul>
+    <li>Gerenciar a CPU</li>
+    <li>Controlar a memória RAM</li>
+    <li>Administrar discos e sistemas de arquivos</li>
+    <li>Gerenciar drivers e dispositivos</li>
+    <li>Cuidar de processos e permissões</li>
+</ul>
+
+<h2>Como ele funciona</h2>
+<p>Quando um programa precisa acessar arquivos, usar memória ou enviar dados para um dispositivo, ele não faz isso diretamente. Em vez disso, ele pede ao kernel, que executa a ação em segurança e organiza os recursos do sistema.</p>
+
+<h2>Tipos de kernel</h2>
+<ul>
+    <li><strong>Monolítico</strong> — grande, com vários componentes integrados (ex.: Linux).</li>
+    <li><strong>Microkernel</strong> — pequeno, apenas com funções básicas (ex.: Minix, QNX).</li>
+    <li><strong>Híbrido</strong> — mistura dos dois modelos (ex.: Windows, macOS).</li>
+</ul>
+
+<h2>Resumo</h2>
+<p>O kernel é a parte central que faz o sistema operacional funcionar. Sem ele, programas não conseguiriam usar o hardware, nem o computador seria capaz de executar qualquer tarefa.</p>
+
+    </div>
+    <div id="tpl-subj8-31">
+     <h2>Aula 31 – SO - Diferença entre Fedora, Ubuntu e Debian</h2>
+      <h1>Debian, Ubuntu e Fedora — Principais Diferenças</h1>
+
+<h2>Visão geral</h2>
+<p>Debian, Ubuntu e Fedora são distribuições Linux com filosofias e objetivos diferentes: estabilidade (Debian), facilidade de uso (Ubuntu) e inovação/tecnologia de ponta (Fedora).</p>
+
+<h2>Debian</h2>
+<p><strong>Perfil:</strong> Estável e conservador.</p>
+<p><strong>Indicação:</strong> Servidores, ambientes que não podem quebrar, usuários que priorizam confiabilidade.</p>
+<p><strong>Característica técnica:</strong> Pacotes .deb, gerenciador apt. Atualizações lentas e muito testadas.</p>
+
+<h2>Ubuntu</h2>
+<p><strong>Perfil:</strong> Amigável, polido e prático.</p>
+<p><strong>Indicação:</strong> Desktops, iniciantes, quem quer bom suporte a drivers e software atual sem complicação.</p>
+<p><strong>Característica técnica:</strong> Baseado em Debian, também usa .deb e apt; traz ajustes e pacotes mais atualizados que o Debian estável.</p>
+
+<h2>Fedora</h2>
+<p><strong>Perfil:</strong> Moderno e orientado à inovação.</p>
+<p><strong>Indicação:</strong> Desenvolvedores, quem quer experimentar tecnologias novas (Wayland, Btrfs, ferramentas recentes).</p>
+<p><strong>Característica técnica:</strong> Usa .rpm e dnf. Ciclo de atualizações rápido e pacotes mais recentes; serve de base experimental para o Red Hat Enterprise Linux.</p>
+
+<h2>Comparação rápida</h2>
+<ul>
+    <li><strong>Estabilidade:</strong> Debian &gt; Ubuntu &gt; Fedora</li>
+    <li><strong>Atualidade de pacotes:</strong> Fedora &gt; Ubuntu &gt; Debian</li>
+    <li><strong>Facilidade para iniciantes:</strong> Ubuntu &gt; Fedora ≈ Debian</li>
+    <li><strong>Uso comum:</strong> Debian (servidores), Ubuntu (desktop/servidor), Fedora (desenvolvimento/tecnologia)</li>
+</ul>
+
+<h2>Quando escolher qual?</h2>
+<ul>
+    <li><strong>Escolha Debian</strong> se precisa de máxima estabilidade e atualizações conservadoras.</li>
+    <li><strong>Escolha Ubuntu</strong> se quer um sistema pronto para uso, bom suporte de drivers e grande comunidade.</li>
+    <li><strong>Escolha Fedora</strong> se quer as últimas tecnologias do ecossistema Linux e não se importa em atualizar com frequência.</li>
+</ul>
+
+<h2>Resumo final</h2>
+<p>Debian é a base estável e tradicional; Ubuntu pega essa base e adiciona usabilidade e suporte; Fedora empurra tecnologias novas e serve para quem quer estar na vanguarda. A escolha depende do equilíbrio que você quer entre estabilidade, facilidade e novidade.</p>
+
+    </div>
+    <div id="tpl-subj8-32">
+     <h2>Aula 32 – SO - Gerenciador de tarefas</h2>
+      <h1>Gerenciador de Tarefas do Windows</h1>
+
+<p>O Gerenciador de Tarefas (Task Manager) permite monitorar, analisar e controlar processos, desempenho e serviços do sistema. É uma ferramenta essencial para diagnosticar travamentos, encerrar programas e identificar gargalos.</p>
+
+<h2>Principais abas e funções</h2>
+
+<h3>Processos</h3>
+<p>Mostra aplicativos e processos em segundo plano, com uso de CPU, memória, disco, rede e GPU. Permite encerrar processos com "Finalizar tarefa".</p>
+
+<h3>Desempenho</h3>
+<p>Exibe gráficos em tempo real da CPU, memória, disco, rede e GPU, mostrando núcleos, threads, taxas de leitura/escrita e uso total.</p>
+
+<h3>Histórico de Aplicativos</h3>
+<p>Mostra o uso de recursos ao longo do tempo por aplicativos da Microsoft Store (útil para analisar comportamento ao longo do dia).</p>
+
+<h3>Inicializar</h3>
+<p>Lista programas que iniciam com o Windows; permite habilitar/desabilitar e mostra o impacto na inicialização.</p>
+
+<h3>Usuários</h3>
+<p>Exibe sessões ativas e o consumo de recursos por usuário conectado ao sistema.</p>
+
+<h3>Detalhes</h3>
+<p>Visão técnica com PID, prioridade, status do processo e uso fino de recursos — indicada para usuários avançados.</p>
+
+<h3>Serviços</h3>
+<p>Lista serviços do Windows; permite iniciar, parar ou reiniciar serviços (útil para resolver problemas de rede, impressora, atualizações, etc.).</p>
+
+<h2>Como abrir o Gerenciador de Tarefas</h2>
+<ul>
+    <li>Ctrl + Shift + Esc</li>
+    <li>Ctrl + Alt + Delete → Gerenciador de Tarefas</li>
+    <li>Clique direito na barra de tarefas → Gerenciador de Tarefas</li>
+    <li>Pesquisar por "Task Manager" ou "Gerenciador de Tarefas" no menu Iniciar</li>
+</ul>
+
+<h2>Quando usar</h2>
+<ul>
+    <li>Encerrar um programa travado</li>
+    <li>Diagnosticar lentidão (verificar CPU/RAM/disco)</li>
+    <li>Identificar processos consumindo rede ou GPU</li>
+    <li>Controlar programas que iniciam com o Windows</li>
+</ul>
+
+<h2>Boas práticas e avisos</h2>
+<ul>
+    <li>Não finalize processos essenciais do sistema (ex.: <code>winlogon</code>, <code>system</code>, serviços críticos), pois pode travar o Windows.</li>
+    <li>Use a aba "Detalhes" com cuidado para alterar prioridades.</li>
+    <li>Para problemas persistentes, observe logs do sistema e pesquise o PID/nome do processo antes de removê-lo.</li>
+</ul>
+
+<h2>Resumo</h2>
+<p>O Gerenciador de Tarefas é a ferramenta central para monitoramento e controle rápido do sistema: encerre processos travados, identifique gargalos e controle programas de inicialização, sempre evitando encerrar processos essenciais do Windows.</p>
+
     </div>
   </div>
 
@@ -1153,6 +2585,6 @@
     <button id="save-custom">Salvar</button>
   </aside>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
